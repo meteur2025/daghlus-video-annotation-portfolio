@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Daghlus Parsaloi Meteur | Image & Video Annotation Specialist</title>
+  <title>Daghlus Parsaloi Meteur | Digital Design & Visual Specialist</title>
 
-  <meta name="description" content="Professional portfolio of Daghlus Parsaloi Meteur, an Image and Video Annotation Specialist focused on AI training data, computer vision, visual analysis, and quality assurance.">
+  <meta
+    name="description"
+    content="Portfolio of Daghlus Parsaloi Meteur, a visual and digital creative professional focused on image editing, illustration, visual composition, creative quality, and digital content."
+  >
 
   <style>
     * {
@@ -21,9 +24,9 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
       background: #f5f7fb;
       color: #1f2937;
+      line-height: 1.7;
     }
 
     a {
@@ -40,13 +43,13 @@
     header {
       background: #111827;
       color: white;
-      padding: 18px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
     nav {
+      min-height: 70px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -54,19 +57,20 @@
     }
 
     .logo {
-      font-size: 20px;
-      font-weight: bold;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: .4px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 18px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     nav a {
-      color: #e5e7eb;
+      color: #d1d5db;
       font-size: 14px;
     }
 
@@ -77,23 +81,32 @@
     .hero {
       background: #1f2937;
       color: white;
-      padding: 90px 0;
+      padding: 100px 0;
     }
 
     .hero-content {
       max-width: 850px;
     }
 
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #d1d5db;
+    }
+
     .hero h1 {
-      font-size: 48px;
-      line-height: 1.15;
+      font-size: 52px;
+      line-height: 1.1;
       margin-bottom: 18px;
     }
 
     .hero h2 {
-      font-size: 24px;
-      font-weight: normal;
-      margin-bottom: 20px;
+      font-size: 23px;
+      font-weight: 400;
+      margin-bottom: 22px;
     }
 
     .hero p {
@@ -103,19 +116,19 @@
     }
 
     .buttons {
-      margin-top: 30px;
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
+      margin-top: 30px;
     }
 
     .button {
-      display: inline-block;
       padding: 12px 20px;
       border-radius: 8px;
       background: white;
       color: #111827;
-      font-weight: bold;
+      font-weight: 700;
+      display: inline-block;
     }
 
     .button.secondary {
@@ -125,12 +138,12 @@
     }
 
     section {
-      padding: 70px 0;
+      padding: 75px 0;
     }
 
     section h2 {
       font-size: 32px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
       color: #111827;
     }
 
@@ -147,14 +160,19 @@
 
     .card {
       background: white;
-      padding: 25px;
+      padding: 28px;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 25px rgba(0,0,0,.06);
     }
 
     .card h3 {
-      margin-bottom: 12px;
+      font-size: 21px;
+      margin-bottom: 10px;
       color: #111827;
+    }
+
+    .card p {
+      color: #4b5563;
     }
 
     .skills {
@@ -164,55 +182,71 @@
     }
 
     .skill {
-      background: #e5e7eb;
-      padding: 8px 13px;
-      border-radius: 20px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 10px 15px;
+      border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
     }
 
-    .experience {
+    .highlight {
       background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 25px rgba(0,0,0,.06);
     }
 
-    .experience h3 {
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
-
-    .experience .role {
-      color: #4b5563;
-      margin-bottom: 20px;
-    }
-
-    ul {
+    .highlight ul {
       padding-left: 22px;
     }
 
-    li {
+    .highlight li {
       margin-bottom: 10px;
     }
 
-    .process {
-      counter-reset: steps;
+    .experience {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0,0,0,.06);
+    }
+
+    .experience h3 {
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .experience ul {
+      padding-left: 22px;
+    }
+
+    .experience li {
+      margin-bottom: 10px;
+    }
+
+    .workflow {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
-    .step {
+    .workflow-item {
       background: white;
-      padding: 22px;
+      padding: 24px;
       border-radius: 10px;
-      border-left: 5px solid #111827;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
     }
 
-    .step strong {
+    .workflow-item strong {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      font-size: 18px;
     }
 
     .contact {
@@ -224,13 +258,13 @@
       color: white;
     }
 
+    .contact-item {
+      margin-bottom: 13px;
+    }
+
     .contact a {
       color: #e5e7eb;
       text-decoration: underline;
-    }
-
-    .contact-item {
-      margin-bottom: 12px;
     }
 
     footer {
@@ -241,23 +275,24 @@
       font-size: 14px;
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
+      .grid,
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 38px;
       }
 
       .hero h2 {
         font-size: 20px;
       }
 
-      .grid,
-      .process {
-        grid-template-columns: 1fr;
-      }
-
       nav {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px 0;
       }
 
       nav ul {
@@ -269,441 +304,459 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">DAGHLUS PARSALОI METEUR</div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">DAGHLUS PARSALОI METEUR</div>
 
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#qa">QA</a></li>
-          <li><a href="#tools">Tools</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#creative">Creative Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main>
+<main>
 
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
 
-          <h1>Daghlus Parsaloi Meteur</h1>
+      <div class="eyebrow">Digital Visual Creative Portfolio</div>
 
-          <h2>
-            Image &amp; Video Annotation Specialist |
-            AI Training Data |
-            Computer Vision |
-            Quality Assurance
-          </h2>
+      <h1>Daghlus Parsaloi Meteur</h1>
 
-          <p>
-            I specialize in image and video annotation, visual data analysis,
-            AI training data, computer vision workflows, and dataset quality
-            assurance. My work focuses on accurate labeling, consistent
-            decisions, careful guideline interpretation, and high-quality
-            training data for AI systems.
-          </p>
+      <h2>
+        Digital Image Editing | Illustration | Visual Design |
+        Creative Content
+      </h2>
 
-          <div class="buttons">
-            <a class="button" href="#contact">Contact Me</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/daghlus-meteur-7849b4385" target="_blank">
-              LinkedIn
-            </a>
-            <a class="button secondary" href="https://github.com/meteur2025" target="_blank">
-              GitHub
-            </a>
-          </div>
+      <p>
+        Visual-focused professional with experience working carefully with
+        digital images, visual information, composition, quality control,
+        and structured creative workflows. I bring strong attention to
+        detail, consistency, and visual accuracy to digital creative work.
+      </p>
 
-        </div>
+      <div class="buttons">
+        <a class="button" href="#contact">Contact Me</a>
+
+        <a
+          class="button secondary"
+          href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          class="button secondary"
+          href="https://github.com/meteur2025"
+          target="_blank"
+        >
+          GitHub
+        </a>
       </div>
-    </section>
 
-    <section id="about">
-      <div class="container">
+    </div>
+  </div>
+</section>
 
-        <h2>Professional Profile</h2>
+<section id="about">
+  <div class="container">
 
-        <p class="intro">
-          I am an Image and Video Annotation Specialist with experience
-          supporting computer vision and AI training-data workflows. I work
-          carefully with visual information, annotation guidelines, quality
-          checks, and dataset consistency.
-          <br><br>
-          My areas of experience include video review, action recognition,
-          event detection, object annotation, hand-pose tracking, video
-          classification, annotation review, and quality assurance.
-          <br><br>
-          I am comfortable working independently in remote environments while
-          maintaining attention to detail, consistency, accuracy, and project
-          guidelines.
+    <h2>Professional Profile</h2>
+
+    <p class="intro">
+      I am a visual-data and digital creative professional with a strong
+      focus on image quality, visual accuracy, structured workflows, and
+      careful review of digital content.
+      <br><br>
+
+      My experience working with visual data has developed strong skills in
+      observing images and video, identifying visual details, maintaining
+      consistency, following specifications, and reviewing visual output
+      for quality.
+      <br><br>
+
+      I am particularly interested in digital image editing, illustration,
+      visual composition, creative content, and design-oriented projects
+      where accuracy and attention to detail are important.
+    </p>
+
+  </div>
+</section>
+
+<section id="creative">
+  <div class="container">
+
+    <h2>Creative & Visual Skills</h2>
+
+    <div class="skills">
+
+      <span class="skill">Digital Image Editing</span>
+      <span class="skill">Digital Illustration</span>
+      <span class="skill">Visual Design</span>
+      <span class="skill">Image Composition</span>
+      <span class="skill">Creative Content</span>
+      <span class="skill">Photo Enhancement</span>
+      <span class="skill">Image Quality Review</span>
+      <span class="skill">Visual Consistency</span>
+      <span class="skill">Color Awareness</span>
+      <span class="skill">Typography Awareness</span>
+      <span class="skill">Layout Awareness</span>
+      <span class="skill">Visual Storytelling</span>
+      <span class="skill">Creative Quality Control</span>
+      <span class="skill">Detail-Oriented Review</span>
+      <span class="skill">Digital Assets</span>
+      <span class="skill">Visual Problem Solving</span>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Creative Work Approach</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Visual Accuracy</h3>
+        <p>
+          I carefully examine visual content and pay attention to details
+          that affect the quality, consistency, and accuracy of the final
+          result.
         </p>
-
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-
-        <h2>Core Skills</h2>
-
-        <div class="skills">
-          <span class="skill">Image Annotation</span>
-          <span class="skill">Video Annotation</span>
-          <span class="skill">AI Data Annotation</span>
-          <span class="skill">Computer Vision</span>
-          <span class="skill">Visual Data Analysis</span>
-          <span class="skill">Action Recognition</span>
-          <span class="skill">Event Detection</span>
-          <span class="skill">Object Annotation</span>
-          <span class="skill">Hand-Pose Tracking</span>
-          <span class="skill">Video Classification</span>
-          <span class="skill">Dataset QA</span>
-          <span class="skill">Annotation Review</span>
-          <span class="skill">Data Validation</span>
-          <span class="skill">Label Consistency</span>
-          <span class="skill">Label Drift Detection</span>
-          <span class="skill">Guideline Interpretation</span>
-          <span class="skill">Error Detection</span>
-          <span class="skill">Dataset Auditing</span>
-          <span class="skill">Quality Control</span>
-          <span class="skill">Remote Collaboration</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-
-        <h2>Professional Experience</h2>
-
-        <div class="experience">
-
-          <h3>Video Annotation &amp; Quality Assurance Professional</h3>
-
-          <p class="role">
-            AI Training Data | Computer Vision | Visual Quality Assurance
-          </p>
-
-          <ul>
-            <li>
-              Reviewed and annotated image and video data for computer vision
-              and AI training workflows.
-            </li>
-
-            <li>
-              Identified actions, events, objects, and visual information
-              according to project-specific annotation guidelines.
-            </li>
-
-            <li>
-              Performed quality assurance checks to identify incorrect,
-              incomplete, inconsistent, or unsupported labels.
-            </li>
-
-            <li>
-              Compared annotations against visual evidence and project
-              instructions before finalizing datasets.
-            </li>
-
-            <li>
-              Monitored label consistency and identified label drift during
-              annotation batches.
-            </li>
-
-            <li>
-              Used calibration and guideline review to maintain consistent
-              decisions across similar visual cases.
-            </li>
-
-            <li>
-              Handled ambiguous visual data by reviewing the available
-              evidence and applying the defined project rules consistently.
-            </li>
-
-            <li>
-              Worked effectively in remote environments while maintaining
-              accuracy, productivity, and communication standards.
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <h2>Computer Vision Focus</h2>
-
-        <div class="grid">
-
-          <div class="card">
-            <h3>Action Recognition</h3>
-            <p>
-              Reviewing video sequences to identify and classify human
-              actions and activities based on visible evidence and project
-              definitions.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Hand-Pose Tracking</h3>
-            <p>
-              Working with visual information involving hand positions,
-              movements, and pose-related annotation requirements.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Video Analysis</h3>
-            <p>
-              Carefully reviewing frames and sequences to identify relevant
-              objects, events, actions, and temporal information.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Visual Evidence</h3>
-            <p>
-              Making annotation decisions based on what can be supported by
-              the visual data rather than assumptions.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="qa">
-      <div class="container">
-
-        <h2>Quality Assurance Methodology</h2>
-
-        <div class="process">
-
-          <div class="step">
-            <strong>1. Understand</strong>
-            Review the task requirements and annotation guidelines.
-          </div>
-
-          <div class="step">
-            <strong>2. Calibrate</strong>
-            Establish consistent decisions using examples and project rules.
-          </div>
-
-          <div class="step">
-            <strong>3. Annotate</strong>
-            Apply labels carefully using the available visual evidence.
-          </div>
-
-          <div class="step">
-            <strong>4. Review</strong>
-            Check annotations for errors, omissions, and inconsistencies.
-          </div>
-
-          <div class="step">
-            <strong>5. Identify Drift</strong>
-            Watch for changes in labeling decisions during a batch.
-          </div>
-
-          <div class="step">
-            <strong>6. Final QA</strong>
-            Complete a final consistency and accuracy review before delivery.
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <h2>Annotation Quality Checklist</h2>
-
-        <div class="card">
-
-          <ul>
-            <li>Does the label match the visible evidence?</li>
-            <li>Does the annotation follow the project guidelines?</li>
-            <li>Is the same rule being applied consistently?</li>
-            <li>Are important objects, actions, or events missing?</li>
-            <li>Are there incorrect or unsupported labels?</li>
-            <li>Is there evidence of label drift?</li>
-            <li>Have ambiguous cases been handled according to the guidelines?</li>
-            <li>Has the dataset received a final quality review?</li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="tools">
-      <div class="container">
-
-        <h2>Tools &amp; Technical Skills</h2>
-
-        <div class="grid">
-
-          <div class="card">
-            <h3>Annotation Platforms</h3>
-            <p>
-              CVAT, Scale AI, Labelbox, and Micro1.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Programming &amp; Data</h3>
-            <p>
-              Python, Pandas, NumPy, Bash, SQL basics, JSON.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Development Tools</h3>
-            <p>
-              Git and GitHub.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Remote Work</h3>
-            <p>
-              Independent task execution, quality-focused review,
-              communication, and collaboration in remote environments.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <h2>Selected Project Experience</h2>
-
-        <div class="grid">
-
-          <div class="card">
-            <h3>Computer Vision Training Data</h3>
-            <p>
-              Supported visual data workflows involving image and video
-              annotation, action recognition, object-related labeling, and
-              structured AI training data.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Visual Data Quality Assurance</h3>
-            <p>
-              Applied systematic review processes to identify annotation
-              errors, inconsistencies, label drift, and guideline-related
-              issues.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <h2>Professional Strengths</h2>
-
-        <div class="skills">
-          <span class="skill">Attention to Detail</span>
-          <span class="skill">Accuracy</span>
-          <span class="skill">Consistency</span>
-          <span class="skill">Quality Assurance</span>
-          <span class="skill">Visual Analysis</span>
-          <span class="skill">Guideline Discipline</span>
-          <span class="skill">Problem Solving</span>
-          <span class="skill">Remote Collaboration</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-
-        <h2>Target Roles</h2>
-
-        <div class="card">
-
-          <ul>
-            <li>Image Annotation Specialist</li>
-            <li>Video Annotation Specialist</li>
-            <li>AI Data Annotation Specialist</li>
-            <li>Computer Vision Data Specialist</li>
-            <li>Data Quality Assurance Specialist</li>
-            <li>AI Training Data Specialist</li>
-          </ul>
-
-        </div>
-
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-
-      <div class="container">
-
-        <h2>Contact</h2>
-
-        <div class="contact-item">
-          <strong>Name:</strong> Daghlus Parsaloi Meteur
-        </div>
-
-        <div class="contact-item">
-          <strong>Location:</strong> Nairobi, Kenya
-        </div>
-
-        <div class="contact-item">
-          <strong>Email:</strong>
-          <a href="mailto:daghlusmeteur@gmail.com">
-            daghlusmeteur@gmail.com
-          </a>
-        </div>
-
-        <div class="contact-item">
-          <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/daghlus-meteur-7849b4385" target="_blank">
-            linkedin.com/in/daghlus-meteur-7849b4385
-          </a>
-        </div>
-
-        <div class="contact-item">
-          <strong>GitHub:</strong>
-          <a href="https://github.com/meteur2025" target="_blank">
-            github.com/meteur2025
-          </a>
-        </div>
-
       </div>
 
-    </section>
+      <div class="card">
+        <h3>Composition</h3>
+        <p>
+          I consider positioning, spacing, balance, hierarchy, and the
+          overall visual relationship between elements.
+        </p>
+      </div>
 
-  </main>
+      <div class="card">
+        <h3>Image Quality</h3>
+        <p>
+          I review digital images carefully for unwanted inconsistencies,
+          visual defects, and quality issues.
+        </p>
+      </div>
 
-  <footer>
-    <div class="container">
-      © 2026 Daghlus Parsaloi Meteur. Image &amp; Video Annotation Portfolio.
+      <div class="card">
+        <h3>Creative Consistency</h3>
+        <p>
+          I follow project requirements carefully so that visual work remains
+          consistent across a collection of assets.
+        </p>
+      </div>
+
     </div>
-  </footer>
+
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+
+    <h2>Professional Experience</h2>
+
+    <div class="experience">
+
+      <h3>Visual Data & Quality Assurance Professional</h3>
+
+      <p class="role">
+        Digital Visual Content | Image & Video Review | Quality Control
+      </p>
+
+      <ul>
+        <li>
+          Reviewed large volumes of digital image and video content with
+          strong attention to visual detail.
+        </li>
+
+        <li>
+          Evaluated visual information against defined project requirements
+          and specifications.
+        </li>
+
+        <li>
+          Identified inconsistencies, quality issues, missing information,
+          and visual errors.
+        </li>
+
+        <li>
+          Maintained consistency across visual content by applying project
+          instructions carefully.
+        </li>
+
+        <li>
+          Performed detailed quality checks before visual data was finalized.
+        </li>
+
+        <li>
+          Worked with structured digital workflows where accuracy,
+          consistency, and attention to detail were essential.
+        </li>
+
+        <li>
+          Worked independently in remote environments while maintaining
+          productivity and quality standards.
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Visual Design Focus</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Image Editing</h3>
+        <p>
+          Focused on careful digital image review, visual improvement,
+          composition, consistency, and presentation quality.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Illustration</h3>
+        <p>
+          Interested in creating and refining digital visual assets with
+          attention to shape, composition, proportion, and visual clarity.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Assets</h3>
+        <p>
+          Able to approach digital visual content systematically while
+          maintaining consistency across related assets.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Quality Control</h3>
+        <p>
+          Strong visual review habits help identify errors and inconsistencies
+          before creative assets are finalized.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="workflow">
+  <div class="container">
+
+    <h2>Creative Workflow</h2>
+
+    <div class="workflow">
+
+      <div class="workflow-item">
+        <strong>01 — Understand</strong>
+        Review the creative brief, requirements, references, and expected
+        output.
+      </div>
+
+      <div class="workflow-item">
+        <strong>02 — Plan</strong>
+        Consider composition, visual hierarchy, positioning, and the intended
+        final presentation.
+      </div>
+
+      <div class="workflow-item">
+        <strong>03 — Create</strong>
+        Develop or refine the visual asset according to the project
+        requirements.
+      </div>
+
+      <div class="workflow-item">
+        <strong>04 — Review</strong>
+        Inspect the work carefully for visual errors, inconsistencies, and
+        quality issues.
+      </div>
+
+      <div class="workflow-item">
+        <strong>05 — Refine</strong>
+        Make appropriate improvements while maintaining the original
+        requirements and creative direction.
+      </div>
+
+      <div class="workflow-item">
+        <strong>06 — Finalize</strong>
+        Complete a final quality review and prepare the visual output for
+        delivery.
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+
+    <h2>Tools & Technical Background</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Creative Software</h3>
+        <p>
+          Adobe Photoshop and Adobe Illustrator are the primary creative
+          software areas relevant to this portfolio and the target role.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Visual Data Tools</h3>
+        <p>
+          CVAT, Scale AI, Labelbox, and Micro1.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <p>
+          Python, Pandas, NumPy, Bash, SQL basics, JSON, Git, and GitHub.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Professional Skills</h3>
+        <p>
+          Attention to detail, visual quality control, consistency,
+          problem solving, independent work, and remote collaboration.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Professional Strengths</h2>
+
+    <div class="skills">
+
+      <span class="skill">Attention to Detail</span>
+      <span class="skill">Visual Accuracy</span>
+      <span class="skill">Creativity</span>
+      <span class="skill">Consistency</span>
+      <span class="skill">Quality Control</span>
+      <span class="skill">Visual Analysis</span>
+      <span class="skill">Problem Solving</span>
+      <span class="skill">Organization</span>
+      <span class="skill">Independent Work</span>
+      <span class="skill">Remote Collaboration</span>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2>Target Opportunity</h2>
+
+    <div class="highlight">
+
+      <p>
+        Interested in creative digital roles involving image editing,
+        illustration, visual content creation, and digital asset production.
+      </p>
+
+      <br>
+
+      <ul>
+        <li>Digital Image Editing</li>
+        <li>Illustration & Creative Visual Work</li>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+        <li>Digital Content Production</li>
+        <li>Visual Quality Assurance</li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <h2>Contact</h2>
+
+    <div class="contact-item">
+      <strong>Name:</strong> Daghlus Parsaloi Meteur
+    </div>
+
+    <div class="contact-item">
+      <strong>Location:</strong> Nairobi, Kenya
+    </div>
+
+    <div class="contact-item">
+      <strong>Email:</strong>
+      <a href="mailto:daghlusmeteur@gmail.com">
+        daghlusmeteur@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <strong>LinkedIn:</strong>
+      <a
+        href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+        target="_blank"
+      >
+        linkedin.com/in/daghlus-meteur-7849b4385
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <strong>GitHub:</strong>
+      <a
+        href="https://github.com/meteur2025"
+        target="_blank"
+      >
+        github.com/meteur2025
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Daghlus Parsaloi Meteur. Digital Visual Creative Portfolio.
+  </div>
+</footer>
 
 </body>
 </html>
