@@ -4,28 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Daghlus Parsaloi Meteur | Digital Design & Visual Specialist</title>
+  <title>Daghlus Parsaloi Meteur | Digital Visual Creative Portfolio</title>
 
   <meta
     name="description"
-    content="Portfolio of Daghlus Parsaloi Meteur, a visual and digital creative professional focused on image editing, illustration, visual composition, creative quality, and digital content."
+    content="Professional portfolio of Daghlus Parsaloi Meteur, focused on digital image editing, illustration, visual design, creative content, and visual quality assurance."
   >
+
+  <meta name="author" content="Daghlus Parsaloi Meteur">
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --bg: #08111f;
+      --bg-light: #0d1929;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-hover: rgba(255, 255, 255, 0.09);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f5f7fb;
+      --muted: #aab6c7;
+      --accent: #7c5cff;
+      --accent-2: #00c2ff;
+      --max: 1180px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #1f2937;
+      background:
+        radial-gradient(circle at top left, rgba(124, 92, 255, 0.18), transparent 35%),
+        radial-gradient(circle at top right, rgba(0, 194, 255, 0.12), transparent 30%),
+        var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
 
@@ -34,269 +49,610 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: 90%;
-      max-width: 1100px;
+      width: min(92%, var(--max));
       margin: auto;
     }
 
-    header {
-      background: #111827;
-      color: white;
+    /* NAVIGATION */
+
+    nav {
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(8, 17, 31, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
     }
 
-    nav {
-      min-height: 70px;
+    .nav-inner {
+      min-height: 74px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      justify-content: space-between;
+      gap: 25px;
     }
 
-    .logo {
-      font-size: 19px;
-      font-weight: 700;
-      letter-spacing: .4px;
+    .brand {
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 18px;
     }
 
-    nav ul {
-      list-style: none;
+    .brand span {
+      color: var(--accent-2);
+    }
+
+    .nav-links {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
     }
 
-    nav a {
-      color: #d1d5db;
+    .nav-links a {
+      color: var(--muted);
       font-size: 14px;
+      transition: 0.25s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: white;
     }
+
+    /* HERO */
 
     .hero {
-      background: #1f2937;
-      color: white;
-      padding: 100px 0;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 70px;
+      align-items: center;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #d9d3ff;
+      background: rgba(124, 92, 255, 0.1);
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 18px;
-      color: #d1d5db;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .hero h2 {
-      font-size: 23px;
-      font-weight: 400;
       margin-bottom: 22px;
     }
 
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, #9c8aff, #65dfff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      color: #d9e1ed;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
     .hero p {
-      color: #d1d5db;
-      font-size: 18px;
-      max-width: 800px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 30px;
     }
 
     .buttons {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      gap: 14px;
     }
 
-    .button {
-      padding: 12px 20px;
-      border-radius: 8px;
-      background: white;
-      color: #111827;
+    .btn {
+      padding: 13px 21px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
       font-weight: 700;
-      display: inline-block;
+      font-size: 14px;
+      transition: 0.25s;
     }
 
-    .button.secondary {
-      background: transparent;
-      border: 1px solid #9ca3af;
-      color: white;
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #5b45d8);
+      border-color: transparent;
     }
 
-    section {
-      padding: 75px 0;
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
     }
 
-    section h2 {
-      font-size: 32px;
-      margin-bottom: 24px;
-      color: #111827;
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
-    .intro {
-      max-width: 850px;
-      font-size: 17px;
+    .hero-card {
+      background: linear-gradient(
+        145deg,
+        rgba(124, 92, 255, 0.18),
+        rgba(0, 194, 255, 0.08)
+      );
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 30px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.25);
     }
 
-    .grid {
+    .profile-mark {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      place-items: center;
+      font-size: 34px;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      margin-bottom: 25px;
     }
 
-    .card {
-      background: white;
-      padding: 28px;
-      border-radius: 12px;
-      box-shadow: 0 6px 25px rgba(0,0,0,.06);
+    .hero-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
     }
 
-    .card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-      color: #111827;
+    .hero-card p {
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
-    .card p {
-      color: #4b5563;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
+    .mini-list {
+      display: grid;
       gap: 10px;
     }
 
-    .skill {
-      background: white;
-      border: 1px solid #e5e7eb;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
+    .mini-item {
+      padding: 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      color: #d9e1ed;
+      font-size: 13px;
     }
 
-    .highlight {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 25px rgba(0,0,0,.06);
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 95px 0;
     }
 
-    .highlight ul {
-      padding-left: 22px;
-    }
-
-    .highlight li {
+    .section-label {
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
       margin-bottom: 10px;
     }
 
+    .section-title {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .panel h3 {
+      font-size: 21px;
+      margin-bottom: 15px;
+    }
+
+    .panel p {
+      color: var(--muted);
+    }
+
+    /* SKILLS */
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .skill {
+      padding: 20px;
+      min-height: 125px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 15px;
+      transition: 0.25s;
+    }
+
+    .skill:hover {
+      background: var(--card-hover);
+      transform: translateY(-4px);
+    }
+
+    .skill strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    .skill span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* CREATIVE AREAS */
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .creative-card {
+      border: 1px solid var(--border);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0.025)
+      );
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .number {
+      color: var(--accent-2);
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .creative-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .creative-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* EXPERIENCE */
+
     .experience {
-      background: white;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 6px 25px rgba(0,0,0,.06);
+      border-left: 2px solid rgba(124,92,255,0.5);
+      padding-left: 28px;
     }
 
     .experience h3 {
-      font-size: 23px;
-      margin-bottom: 5px;
+      font-size: 26px;
+      margin-bottom: 7px;
     }
 
-    .role {
-      color: #6b7280;
+    .experience .role {
+      color: var(--accent-2);
+      font-weight: 700;
       margin-bottom: 20px;
     }
 
     .experience ul {
-      padding-left: 22px;
+      padding-left: 20px;
+      color: var(--muted);
     }
 
     .experience li {
       margin-bottom: 10px;
     }
 
-    .workflow {
+    /* WORK SAMPLES */
+
+    .sample-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
-    .workflow-item {
-      background: white;
-      padding: 24px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    .sample {
+      min-height: 230px;
+      border: 1px dashed rgba(255,255,255,0.2);
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(145deg, rgba(124,92,255,0.12), rgba(0,194,255,0.04));
     }
 
-    .workflow-item strong {
-      display: block;
+    .sample h3 {
       margin-bottom: 8px;
-      font-size: 18px;
     }
 
-    .contact {
-      background: #111827;
-      color: white;
+    .sample p {
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    .contact h2 {
-      color: white;
+    .sample-note {
+      margin-top: 25px;
+      color: #aeb9c9;
+      font-size: 13px;
+      border-left: 3px solid var(--accent-2);
+      padding-left: 15px;
     }
 
-    .contact-item {
-      margin-bottom: 13px;
+    /* WORKFLOW */
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
     }
 
-    .contact a {
-      color: #e5e7eb;
-      text-decoration: underline;
+    .step {
+      padding: 20px 15px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
     }
 
-    footer {
-      background: #0b1120;
-      color: #9ca3af;
-      text-align: center;
-      padding: 25px 0;
+    .step-number {
+      font-size: 12px;
+      color: var(--accent-2);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      font-size: 15px;
+      margin: 10px 0 5px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* TOOLS */
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tool-box {
+      padding: 27px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    .tool-box h3 {
+      margin-bottom: 15px;
+    }
+
+    .tool-box p {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
-      .grid,
-      .workflow {
+    .tool-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #d9e1ed;
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* STRENGTHS */
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .strength {
+      text-align: center;
+      padding: 18px 10px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+      font-size: 13px;
+      color: #dce4ef;
+    }
+
+    /* TARGET */
+
+    .target {
+      border-radius: 24px;
+      padding: 45px;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(124,92,255,0.18),
+          rgba(0,194,255,0.08)
+        );
+    }
+
+    .target h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .target p {
+      color: var(--muted);
+      max-width: 780px;
+      margin-bottom: 25px;
+    }
+
+    .target-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .contact-value {
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .contact-value a:hover {
+      color: var(--accent-2);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1000px) {
+      .hero-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: 38px;
+      .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero h2 {
-        font-size: 20px;
+      .creative-grid,
+      .sample-grid,
+      .tools-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 0;
+      .workflow {
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      nav ul {
-        gap: 12px;
+      .strength-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        min-height: 65px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .about-grid,
+      .creative-grid,
+      .sample-grid,
+      .tools-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .strength-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .target {
+        padding: 28px;
       }
     }
   </style>
@@ -304,459 +660,695 @@
 
 <body>
 
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo">DAGHLUS PARSALОI METEUR</div>
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        DAGHLUS <span>METEUR</span>
+      </a>
 
-      <ul>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#creative">Creative Skills</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#workflow">Workflow</a></li>
         <li><a href="#tools">Tools</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+    </div>
+  </nav>
 
-<main>
+  <main id="top">
 
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
 
-      <div class="eyebrow">Digital Visual Creative Portfolio</div>
+        <div>
+          <div class="eyebrow">
+            DIGITAL VISUAL CREATIVE PORTFOLIO
+          </div>
 
-      <h1>Daghlus Parsaloi Meteur</h1>
+          <h1>
+            Daghlus<br>
+            <span class="gradient-text">Parsaloi Meteur</span>
+          </h1>
 
-      <h2>
-        Digital Image Editing | Illustration | Visual Design |
-        Creative Content
-      </h2>
+          <h2>
+            Digital Image Editing · Illustration · Visual Design
+          </h2>
 
-      <p>
-        Visual-focused professional with experience working carefully with
-        digital images, visual information, composition, quality control,
-        and structured creative workflows. I bring strong attention to
-        detail, consistency, and visual accuracy to digital creative work.
-      </p>
+          <p>
+            Visual-focused professional with experience working carefully
+            with digital images, visual information, quality control, and
+            structured digital workflows. Strong attention to detail,
+            consistency, visual accuracy, and creative problem solving.
+          </p>
 
-      <div class="buttons">
-        <a class="button" href="#contact">Contact Me</a>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#work">
+              View Portfolio
+            </a>
 
-        <a
-          class="button secondary"
-          href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
+            <a class="btn btn-secondary" href="#contact">
+              Contact Me
+            </a>
 
-        <a
-          class="button secondary"
-          href="https://github.com/meteur2025"
-          target="_blank"
-        >
-          GitHub
-        </a>
+            <a
+              class="btn btn-secondary"
+              href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+
+          <div class="profile-mark">
+            DM
+          </div>
+
+          <h3>
+            Visual Creative Focus
+          </h3>
+
+          <p>
+            Focused on digital visual work where precision,
+            composition, consistency, and quality matter.
+          </p>
+
+          <div class="mini-list">
+            <div class="mini-item">
+              Digital Image Editing
+            </div>
+
+            <div class="mini-item">
+              Adobe Photoshop
+            </div>
+
+            <div class="mini-item">
+              Adobe Illustrator
+            </div>
+
+            <div class="mini-item">
+              Illustration & Visual Design
+            </div>
+
+            <div class="mini-item">
+              Visual Quality Assurance
+            </div>
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
 
-<section id="about">
-  <div class="container">
+        <div class="section-label">
+          About
+        </div>
 
-    <h2>Professional Profile</h2>
+        <h2 class="section-title">
+          Detail-driven visual work.
+        </h2>
 
-    <p class="intro">
-      I am a visual-data and digital creative professional with a strong
-      focus on image quality, visual accuracy, structured workflows, and
-      careful review of digital content.
-      <br><br>
-
-      My experience working with visual data has developed strong skills in
-      observing images and video, identifying visual details, maintaining
-      consistency, following specifications, and reviewing visual output
-      for quality.
-      <br><br>
-
-      I am particularly interested in digital image editing, illustration,
-      visual composition, creative content, and design-oriented projects
-      where accuracy and attention to detail are important.
-    </p>
-
-  </div>
-</section>
-
-<section id="creative">
-  <div class="container">
-
-    <h2>Creative & Visual Skills</h2>
-
-    <div class="skills">
-
-      <span class="skill">Digital Image Editing</span>
-      <span class="skill">Digital Illustration</span>
-      <span class="skill">Visual Design</span>
-      <span class="skill">Image Composition</span>
-      <span class="skill">Creative Content</span>
-      <span class="skill">Photo Enhancement</span>
-      <span class="skill">Image Quality Review</span>
-      <span class="skill">Visual Consistency</span>
-      <span class="skill">Color Awareness</span>
-      <span class="skill">Typography Awareness</span>
-      <span class="skill">Layout Awareness</span>
-      <span class="skill">Visual Storytelling</span>
-      <span class="skill">Creative Quality Control</span>
-      <span class="skill">Detail-Oriented Review</span>
-      <span class="skill">Digital Assets</span>
-      <span class="skill">Visual Problem Solving</span>
-
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Creative Work Approach</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Visual Accuracy</h3>
-        <p>
-          I carefully examine visual content and pay attention to details
-          that affect the quality, consistency, and accuracy of the final
-          result.
+        <p class="section-intro">
+          My background in visual data and quality-focused workflows has
+          developed a strong ability to observe details, follow visual
+          requirements, identify inconsistencies, and maintain quality
+          across digital content.
         </p>
-      </div>
 
-      <div class="card">
-        <h3>Composition</h3>
-        <p>
-          I consider positioning, spacing, balance, hierarchy, and the
-          overall visual relationship between elements.
+        <div class="about-grid">
+
+          <div class="panel">
+            <h3>Professional Profile</h3>
+
+            <p>
+              I am a visual-data and digital creative professional
+              interested in image editing, illustration, visual
+              composition, digital content, and design-oriented work.
+              I approach visual tasks systematically while paying close
+              attention to detail and consistency.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>What I Bring</h3>
+
+            <p>
+              Strong observation, structured review, visual quality
+              control, attention to detail, consistency, organization,
+              problem solving, and the ability to work independently
+              within defined project requirements.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+
+        <div class="section-label">
+          Creative Skills
+        </div>
+
+        <h2 class="section-title">
+          Visual skills built around precision.
+        </h2>
+
+        <p class="section-intro">
+          Core areas relevant to digital image editing, illustration,
+          visual design, creative content, and visual quality assurance.
         </p>
-      </div>
 
-      <div class="card">
-        <h3>Image Quality</h3>
-        <p>
-          I review digital images carefully for unwanted inconsistencies,
-          visual defects, and quality issues.
+        <div class="skill-grid">
+
+          <div class="skill">
+            <strong>Digital Image Editing</strong>
+            <span>Careful image review, refinement and presentation.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Digital Illustration</strong>
+            <span>Visual asset development with attention to clarity and proportion.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Visual Design</strong>
+            <span>Structured visual presentation and clear communication.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Image Composition</strong>
+            <span>Balance, spacing, positioning and visual hierarchy.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Photo Enhancement</strong>
+            <span>Focus on clean, consistent and visually appropriate output.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Color Awareness</strong>
+            <span>Attention to visual balance and consistent presentation.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Typography & Layout</strong>
+            <span>Awareness of readability, hierarchy, spacing and alignment.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Visual Storytelling</strong>
+            <span>Using visual elements to communicate ideas clearly.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Creative Quality Control</strong>
+            <span>Detailed review before visual work is finalized.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Visual Consistency</strong>
+            <span>Maintaining consistent standards across related assets.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Digital Assets</strong>
+            <span>Organized approach to digital visual content.</span>
+          </div>
+
+          <div class="skill">
+            <strong>Visual Problem Solving</strong>
+            <span>Identifying issues and improving visual output systematically.</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATIVE AREAS -->
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          Creative Capabilities
+        </div>
+
+        <h2 class="section-title">
+          A structured approach to creative work.
+        </h2>
+
+        <div class="creative-grid">
+
+          <div class="creative-card">
+            <div class="number">01</div>
+            <h3>Image Editing</h3>
+            <p>
+              Careful review and refinement of digital images with
+              attention to presentation, consistency, composition and
+              visual quality.
+            </p>
+          </div>
+
+          <div class="creative-card">
+            <div class="number">02</div>
+            <h3>Illustration</h3>
+            <p>
+              Interest in developing and refining digital visual assets
+              with attention to shape, proportion, clarity and overall
+              composition.
+            </p>
+          </div>
+
+          <div class="creative-card">
+            <div class="number">03</div>
+            <h3>Visual Design</h3>
+            <p>
+              Organized visual thinking focused on hierarchy, spacing,
+              balance, readability and effective presentation.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+
+        <div class="section-label">
+          Selected Work
+        </div>
+
+        <h2 class="section-title">
+          Creative portfolio work.
+        </h2>
+
+        <p class="section-intro">
+          This section is structured for selected examples of original
+          digital creative work in image editing, illustration and visual
+          design.
         </p>
-      </div>
 
-      <div class="card">
-        <h3>Creative Consistency</h3>
-        <p>
-          I follow project requirements carefully so that visual work remains
-          consistent across a collection of assets.
+        <div class="sample-grid">
+
+          <div class="sample">
+            <h3>Image Editing</h3>
+            <p>
+              Space reserved for an original image-editing project,
+              showing the source, editing process and final result.
+            </p>
+          </div>
+
+          <div class="sample">
+            <h3>Digital Illustration</h3>
+            <p>
+              Space reserved for an original illustration project
+              demonstrating composition, shape and visual creativity.
+            </p>
+          </div>
+
+          <div class="sample">
+            <h3>Visual Design</h3>
+            <p>
+              Space reserved for an original design project demonstrating
+              layout, typography, color and visual hierarchy.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="sample-note">
+          Portfolio examples should be original work created by Daghlus
+          Parsaloi Meteur. No client work, certification or professional
+          experience is represented here unless specifically stated.
         </p>
+
       </div>
+    </section>
 
-    </div>
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
 
-  </div>
-</section>
+        <div class="section-label">
+          Experience
+        </div>
 
-<section id="experience">
-  <div class="container">
+        <h2 class="section-title">
+          Visual data & quality assurance background.
+        </h2>
 
-    <h2>Professional Experience</h2>
+        <div class="experience">
 
-    <div class="experience">
+          <h3>
+            Visual Data & Quality Assurance Professional
+          </h3>
 
-      <h3>Visual Data & Quality Assurance Professional</h3>
+          <div class="role">
+            Digital Visual Content · Image & Video Review · Quality Control
+          </div>
 
-      <p class="role">
-        Digital Visual Content | Image & Video Review | Quality Control
-      </p>
+          <ul>
+            <li>
+              Reviewed large volumes of digital image and video content
+              with strong attention to visual detail.
+            </li>
 
-      <ul>
-        <li>
-          Reviewed large volumes of digital image and video content with
-          strong attention to visual detail.
-        </li>
+            <li>
+              Evaluated visual information against defined project
+              requirements and specifications.
+            </li>
 
-        <li>
-          Evaluated visual information against defined project requirements
-          and specifications.
-        </li>
+            <li>
+              Identified inconsistencies, quality issues, missing
+              information and visual errors.
+            </li>
 
-        <li>
-          Identified inconsistencies, quality issues, missing information,
-          and visual errors.
-        </li>
+            <li>
+              Maintained consistency across visual content by applying
+              project instructions carefully.
+            </li>
 
-        <li>
-          Maintained consistency across visual content by applying project
-          instructions carefully.
-        </li>
+            <li>
+              Performed detailed quality checks before visual data was
+              finalized.
+            </li>
 
-        <li>
-          Performed detailed quality checks before visual data was finalized.
-        </li>
+            <li>
+              Worked with structured digital workflows where accuracy,
+              consistency and attention to detail were essential.
+            </li>
 
-        <li>
-          Worked with structured digital workflows where accuracy,
-          consistency, and attention to detail were essential.
-        </li>
+            <li>
+              Worked independently in remote environments while
+              maintaining productivity and quality standards.
+            </li>
+          </ul>
 
-        <li>
-          Worked independently in remote environments while maintaining
-          productivity and quality standards.
-        </li>
-      </ul>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- WORKFLOW -->
+    <section>
+      <div class="container">
 
-  </div>
-</section>
+        <div class="section-label">
+          Workflow
+        </div>
 
-<section>
-  <div class="container">
+        <h2 class="section-title">
+          From brief to final output.
+        </h2>
 
-    <h2>Visual Design Focus</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Image Editing</h3>
-        <p>
-          Focused on careful digital image review, visual improvement,
-          composition, consistency, and presentation quality.
+        <p class="section-intro">
+          A disciplined workflow helps maintain quality, consistency and
+          alignment with the intended creative direction.
         </p>
-      </div>
 
-      <div class="card">
-        <h3>Illustration</h3>
-        <p>
-          Interested in creating and refining digital visual assets with
-          attention to shape, composition, proportion, and visual clarity.
+        <div class="workflow">
+
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Understand</h3>
+            <p>Review requirements, references and expected output.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Plan</h3>
+            <p>Consider composition, hierarchy and presentation.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Create</h3>
+            <p>Develop or refine the visual asset.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Review</h3>
+            <p>Check visual quality and consistency.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">05</div>
+            <h3>Refine</h3>
+            <p>Improve the work while respecting requirements.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">06</div>
+            <h3>Finalize</h3>
+            <p>Complete final quality review and delivery preparation.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools">
+      <div class="container">
+
+        <div class="section-label">
+          Tools & Background
+        </div>
+
+        <h2 class="section-title">
+          Creative and technical foundation.
+        </h2>
+
+        <div class="tools-grid">
+
+          <div class="tool-box">
+            <h3>Creative Software</h3>
+
+            <p>
+              Creative software relevant to the targeted digital image
+              editing and illustration opportunity.
+            </p>
+
+            <div class="tool-tags">
+              <span class="tag">Adobe Photoshop</span>
+              <span class="tag">Adobe Illustrator</span>
+            </div>
+          </div>
+
+          <div class="tool-box">
+            <h3>Visual Data Tools</h3>
+
+            <p>
+              Experience with structured visual-data and annotation
+              environments.
+            </p>
+
+            <div class="tool-tags">
+              <span class="tag">CVAT</span>
+              <span class="tag">Scale AI</span>
+              <span class="tag">Labelbox</span>
+              <span class="tag">Micro1</span>
+            </div>
+          </div>
+
+          <div class="tool-box">
+            <h3>Technical Skills</h3>
+
+            <p>
+              Supporting technical knowledge for digital workflows and
+              structured data environments.
+            </p>
+
+            <div class="tool-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Bash</span>
+              <span class="tag">SQL Basics</span>
+              <span class="tag">JSON</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          Professional Strengths
+        </div>
+
+        <h2 class="section-title">
+          How I work.
+        </h2>
+
+        <div class="strength-grid">
+
+          <div class="strength">Attention to Detail</div>
+          <div class="strength">Visual Accuracy</div>
+          <div class="strength">Creativity</div>
+          <div class="strength">Consistency</div>
+          <div class="strength">Quality Control</div>
+          <div class="strength">Visual Analysis</div>
+          <div class="strength">Problem Solving</div>
+          <div class="strength">Organization</div>
+          <div class="strength">Independent Work</div>
+          <div class="strength">Remote Collaboration</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TARGET ROLE -->
+    <section>
+      <div class="container">
+
+        <div class="target">
+
+          <div class="section-label">
+            Target Opportunity
+          </div>
+
+          <h3>
+            Digital Creative & Visual Production
+          </h3>
+
+          <p>
+            Interested in opportunities involving digital image editing,
+            illustration, visual design and creative digital content,
+            particularly projects requiring careful visual execution,
+            consistency and quality control.
+          </p>
+
+          <div class="target-list">
+
+            <span class="tag">Digital Image Editing</span>
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Adobe Illustrator</span>
+            <span class="tag">Illustration</span>
+            <span class="tag">Visual Design</span>
+            <span class="tag">Creative Content</span>
+            <span class="tag">Digital Assets</span>
+            <span class="tag">Visual QA</span>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="section-label">
+          Contact
+        </div>
+
+        <h2 class="section-title">
+          Let's connect.
+        </h2>
+
+        <p class="section-intro">
+          For professional opportunities, collaborations and digital
+          creative projects, please use the contact details below.
         </p>
+
+        <div class="contact-grid">
+
+          <div class="panel">
+
+            <div class="contact-item">
+              <div class="contact-label">Name</div>
+              <div class="contact-value">
+                Daghlus Parsaloi Meteur
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Location</div>
+              <div class="contact-value">
+                Nairobi, Kenya
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Email</div>
+              <div class="contact-value">
+                <a href="mailto:daghlusmeteur@gmail.com">
+                  daghlusmeteur@gmail.com
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="panel">
+
+            <div class="contact-item">
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">
+                <a
+                  href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  linkedin.com/in/daghlus-meteur-7849b4385
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value">
+                <a
+                  href="https://github.com/meteur2025"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  github.com/meteur2025
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-label">Professional Focus</div>
+              <div class="contact-value">
+                Digital Visual Creative Work
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Creative Assets</h3>
-        <p>
-          Able to approach digital visual content systematically while
-          maintaining consistency across related assets.
-        </p>
-      </div>
+  </main>
 
-      <div class="card">
-        <h3>Quality Control</h3>
-        <p>
-          Strong visual review habits help identify errors and inconsistencies
-          before creative assets are finalized.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="workflow">
-  <div class="container">
-
-    <h2>Creative Workflow</h2>
-
-    <div class="workflow">
-
-      <div class="workflow-item">
-        <strong>01 — Understand</strong>
-        Review the creative brief, requirements, references, and expected
-        output.
-      </div>
-
-      <div class="workflow-item">
-        <strong>02 — Plan</strong>
-        Consider composition, visual hierarchy, positioning, and the intended
-        final presentation.
-      </div>
-
-      <div class="workflow-item">
-        <strong>03 — Create</strong>
-        Develop or refine the visual asset according to the project
-        requirements.
-      </div>
-
-      <div class="workflow-item">
-        <strong>04 — Review</strong>
-        Inspect the work carefully for visual errors, inconsistencies, and
-        quality issues.
-      </div>
-
-      <div class="workflow-item">
-        <strong>05 — Refine</strong>
-        Make appropriate improvements while maintaining the original
-        requirements and creative direction.
-      </div>
-
-      <div class="workflow-item">
-        <strong>06 — Finalize</strong>
-        Complete a final quality review and prepare the visual output for
-        delivery.
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="tools">
-  <div class="container">
-
-    <h2>Tools & Technical Background</h2>
-
-    <div class="grid">
-
-      <div class="card">
-        <h3>Creative Software</h3>
-        <p>
-          Adobe Photoshop and Adobe Illustrator are the primary creative
-          software areas relevant to this portfolio and the target role.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Visual Data Tools</h3>
-        <p>
-          CVAT, Scale AI, Labelbox, and Micro1.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Technical Skills</h3>
-        <p>
-          Python, Pandas, NumPy, Bash, SQL basics, JSON, Git, and GitHub.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Professional Skills</h3>
-        <p>
-          Attention to detail, visual quality control, consistency,
-          problem solving, independent work, and remote collaboration.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Professional Strengths</h2>
-
-    <div class="skills">
-
-      <span class="skill">Attention to Detail</span>
-      <span class="skill">Visual Accuracy</span>
-      <span class="skill">Creativity</span>
-      <span class="skill">Consistency</span>
-      <span class="skill">Quality Control</span>
-      <span class="skill">Visual Analysis</span>
-      <span class="skill">Problem Solving</span>
-      <span class="skill">Organization</span>
-      <span class="skill">Independent Work</span>
-      <span class="skill">Remote Collaboration</span>
-
-    </div>
-
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <h2>Target Opportunity</h2>
-
-    <div class="highlight">
-
-      <p>
-        Interested in creative digital roles involving image editing,
-        illustration, visual content creation, and digital asset production.
-      </p>
-
-      <br>
-
-      <ul>
-        <li>Digital Image Editing</li>
-        <li>Illustration & Creative Visual Work</li>
-        <li>Adobe Photoshop</li>
-        <li>Adobe Illustrator</li>
-        <li>Digital Content Production</li>
-        <li>Visual Quality Assurance</li>
-      </ul>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="contact" class="contact">
-
-  <div class="container">
-
-    <h2>Contact</h2>
-
-    <div class="contact-item">
-      <strong>Name:</strong> Daghlus Parsaloi Meteur
-    </div>
-
-    <div class="contact-item">
-      <strong>Location:</strong> Nairobi, Kenya
-    </div>
-
-    <div class="contact-item">
-      <strong>Email:</strong>
-      <a href="mailto:daghlusmeteur@gmail.com">
-        daghlusmeteur@gmail.com
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <strong>LinkedIn:</strong>
-      <a
-        href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
-        target="_blank"
-      >
-        linkedin.com/in/daghlus-meteur-7849b4385
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <strong>GitHub:</strong>
-      <a
-        href="https://github.com/meteur2025"
-        target="_blank"
-      >
-        github.com/meteur2025
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    © 2026 Daghlus Parsaloi Meteur. Digital Visual Creative Portfolio.
-  </div>
-</footer>
+  <footer>
+    © 2026 Daghlus Parsaloi Meteur · Digital Visual Creative Portfolio
+  </footer>
 
 </body>
 </html>
