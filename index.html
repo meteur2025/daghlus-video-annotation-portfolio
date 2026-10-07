@@ -85,6 +85,10 @@
       font-weight: 800;
       letter-spacing: 1px;
       white-space: nowrap;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
     }
 
     .nav-links {
@@ -400,29 +404,35 @@
       border: 1px solid var(--border);
       border-radius: 18px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     .work-visual {
-      min-height: 230px;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--surface-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 25px;
-      background:
-        linear-gradient(135deg, rgba(128,100,255,0.18), rgba(35,200,255,0.08)),
-        var(--surface-light);
     }
 
-    .work-visual span {
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    .work-visual img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .work-card:hover .work-visual img {
+      transform: scale(1.03);
     }
 
     .work-content {
       padding: 24px;
+      flex: 1;
     }
 
     .work-content h3 {
@@ -432,6 +442,16 @@
     .work-content p {
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .work-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
     }
 
     .notice {
@@ -712,6 +732,10 @@
 
       .section {
         padding: 60px 0;
+      }
+
+      .work-visual {
+        aspect-ratio: 16 / 11;
       }
     }
 
@@ -1120,9 +1144,8 @@
           <h2>Creative portfolio work.</h2>
 
           <p class="section-intro">
-            This section is prepared for selected examples of original
-            digital creative work in image editing, illustration and
-            visual design.
+            Selected examples of original digital creative practice
+            in image editing, illustration and visual design.
           </p>
 
         </div>
@@ -1130,19 +1153,30 @@
 
         <div class="work-grid">
 
+          <!-- IMAGE 1: IMAGE EDITING -->
+
           <div class="work-card">
 
             <div class="work-visual">
-              <span>Image Editing Practice</span>
+
+              <img
+                src="./Screenshot%202026-10-07%20084803.png"
+                alt="Image Editing Practice by Daghlus Parsaloi Meteur"
+                loading="lazy">
+
             </div>
 
             <div class="work-content">
+
+              <span class="work-label">
+                Personal Practice
+              </span>
 
               <h3>Image Editing</h3>
 
               <p>
-                Original image-editing work can be presented here,
-                including the source image, editing process and final result.
+                Personal image-editing practice demonstrating attention
+                to visual presentation, image quality and detail.
               </p>
 
             </div>
@@ -1150,19 +1184,30 @@
           </div>
 
 
+          <!-- IMAGE 2: DIGITAL ILLUSTRATION -->
+
           <div class="work-card">
 
             <div class="work-visual">
-              <span>Illustration Practice</span>
+
+              <img
+                src="./Screenshot%202026-10-07%20085503.png"
+                alt="Digital Illustration Practice by Daghlus Parsaloi Meteur"
+                loading="lazy">
+
             </div>
 
             <div class="work-content">
+
+              <span class="work-label">
+                Personal Practice
+              </span>
 
               <h3>Digital Illustration</h3>
 
               <p>
-                Original illustration work can be presented here,
-                demonstrating composition, shape, proportion and creativity.
+                Personal illustration practice demonstrating visual
+                composition, shape, proportion and creative presentation.
               </p>
 
             </div>
@@ -1170,20 +1215,30 @@
           </div>
 
 
+          <!-- IMAGE 3: VISUAL DESIGN -->
+
           <div class="work-card">
 
             <div class="work-visual">
-              <span>Visual Design Practice</span>
+
+              <img
+                src="./Screenshot%202026-10-07%20085800.png"
+                alt="Visual Design Practice by Daghlus Parsaloi Meteur"
+                loading="lazy">
+
             </div>
 
             <div class="work-content">
 
+              <span class="work-label">
+                Personal Practice
+              </span>
+
               <h3>Visual Design</h3>
 
               <p>
-                Original design work can be presented here,
-                demonstrating layout, typography, visual hierarchy
-                and presentation.
+                Personal visual design practice demonstrating layout,
+                hierarchy, spacing and overall visual presentation.
               </p>
 
             </div>
@@ -1194,9 +1249,9 @@
 
 
         <div class="notice">
-          Only original work created by Daghlus Parsaloi Meteur should
-          be added to this portfolio. Client work, certifications and
-          professional claims should only be included when accurate.
+          These examples are personal practice work created for portfolio
+          presentation. Client work, certifications and professional
+          claims should only be included when accurate.
         </div>
 
       </div>
