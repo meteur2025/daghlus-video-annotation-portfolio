@@ -4,30 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Daghlus Parsaloi Meteur | Digital Visual Creative Portfolio</title>
+  <title>Daghlus Parsaloi Meteur | Digital Creative Portfolio</title>
 
   <meta
     name="description"
-    content="Daghlus Parsaloi Meteur — Digital Image Editing, Illustration, Visual Design and Visual Quality Assurance Portfolio."
+    content="Portfolio of Daghlus Parsaloi Meteur featuring digital image editing, illustration, visual design, visual analysis, and quality-focused digital work."
   >
+
+  <meta name="author" content="Daghlus Parsaloi Meteur">
 
   <style>
     :root {
-      --background: #07111f;
-      --surface: #0d1a2b;
-      --surface-light: #122238;
-      --border: rgba(255,255,255,0.12);
-      --text: #f5f7fb;
-      --muted: #aab7c8;
-      --purple: #8064ff;
-      --blue: #23c8ff;
-      --max-width: 1180px;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-light: #f1f3f6;
+      --text: #17191c;
+      --muted: #66707a;
+      --border: #e1e5e9;
+      --blue: #1769e0;
+      --blue-dark: #0e4fae;
+      --shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+      --radius: 18px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -36,13 +39,9 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top right, rgba(128,100,255,0.14), transparent 35%),
-        radial-gradient(circle at top left, rgba(35,200,255,0.08), transparent 30%),
-        var(--background);
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
+      line-height: 1.7;
     }
 
     a {
@@ -50,112 +49,83 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
+    img {
+      max-width: 100%;
     }
 
     .container {
-      width: min(100% - 40px, var(--max-width));
-      margin: 0 auto;
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    /* NAVIGATION */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(7,17,31,0.94);
-      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav {
-      min-height: 76px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 20px;
     }
 
     .logo {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 800;
-      letter-spacing: 1px;
-      white-space: nowrap;
-      border: 0;
-      background: transparent;
-      color: var(--text);
-      cursor: pointer;
+      letter-spacing: -0.5px;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
+      justify-content: flex-end;
     }
 
     .nav-links button {
       border: 0;
       background: transparent;
       color: var(--muted);
-      padding: 10px 13px;
-      border-radius: 10px;
+      padding: 9px 11px;
+      border-radius: 9px;
       cursor: pointer;
-      transition: 0.25s ease;
+      font-size: 14px;
+      font-weight: 700;
     }
 
     .nav-links button:hover,
     .nav-links button.active {
-      color: var(--text);
       background: var(--surface-light);
+      color: var(--blue);
     }
 
-    /* =========================
-       PAGE SYSTEM
-    ========================= */
+    /* PAGE SYSTEM */
 
-    .page {
+    main {
       display: none;
-      animation: fadeIn 0.35s ease;
     }
 
-    .page.active {
+    main.active {
       display: block;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
+    /* HERO */
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* =========================
-       HOME
-    ========================= */
-
-    .home {
-      min-height: calc(100vh - 76px);
-      display: flex;
-      align-items: center;
-      padding: 70px 0;
-    }
-
-    .hero-grid {
+    .hero {
+      min-height: calc(100vh - 72px);
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
       gap: 60px;
       align-items: center;
+      padding: 80px 0;
     }
 
     .eyebrow {
@@ -164,191 +134,161 @@
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
-      font-size: clamp(48px, 8vw, 88px);
-      line-height: 0.98;
-      letter-spacing: -4px;
-      margin-bottom: 24px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      display: block;
-    }
-
-    .hero h1 .last-name {
-      background: linear-gradient(90deg, var(--purple), var(--blue));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-title {
-      font-size: clamp(20px, 3vw, 32px);
-      font-weight: 700;
+    .hero h2 {
+      font-size: clamp(21px, 3vw, 30px);
       margin-bottom: 20px;
+      font-weight: 700;
     }
 
-    .hero-description {
-      max-width: 720px;
+    .hero p {
       color: var(--muted);
+      max-width: 700px;
       font-size: 17px;
-      line-height: 1.8;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 20px;
-      border-radius: 12px;
+      min-height: 46px;
+      padding: 0 19px;
+      border-radius: 10px;
       border: 1px solid var(--border);
+      font-weight: 800;
+      font-size: 14px;
       cursor: pointer;
-      font-weight: 700;
-      transition: 0.25s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--purple), var(--blue));
-      color: white;
-      border: 0;
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
     }
 
     .btn-secondary {
       background: var(--surface);
-      color: var(--text);
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
+    .btn-secondary:hover {
+      border-color: var(--blue);
+      color: var(--blue);
     }
 
     .hero-card {
-      background:
-        linear-gradient(145deg, rgba(128,100,255,0.15), rgba(35,200,255,0.05)),
-        var(--surface);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 24px;
-      padding: 30px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+      padding: 32px;
+      box-shadow: var(--shadow);
     }
 
     .hero-card h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 22px;
     }
 
-    .focus-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .hero-card-item {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
     }
 
-    .focus-item {
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.025);
-      color: var(--muted);
+    .hero-card-item:last-child {
+      border-bottom: 0;
     }
 
-    .focus-item strong {
-      color: var(--text);
-    }
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
+    /* SECTIONS */
 
     .section {
-      padding: 80px 0;
-      min-height: calc(100vh - 76px);
+      padding: 85px 0;
     }
 
     .section-header {
       max-width: 760px;
-      margin-bottom: 42px;
+      margin-bottom: 45px;
     }
 
-    .section-label {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .section h2 {
-      font-size: clamp(36px, 5vw, 56px);
-      line-height: 1.05;
-      letter-spacing: -2px;
+    .section-header h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
       margin-bottom: 16px;
     }
 
-    .section-intro {
+    .section-header p {
       color: var(--muted);
       font-size: 17px;
-      max-width: 760px;
     }
 
-    /* =========================
-       ABOUT
-    ========================= */
+    .back-home {
+      margin-bottom: 25px;
+    }
+
+    /* ABOUT */
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      gap: 24px;
     }
 
-    .card {
+    .info-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
     }
 
-    .card h3 {
+    .info-card h3 {
+      margin-bottom: 14px;
       font-size: 21px;
-      margin-bottom: 12px;
     }
 
-    .card p {
+    .info-card p {
       color: var(--muted);
     }
 
-    /* =========================
-       SKILLS
-    ========================= */
+    /* SKILLS */
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .skill-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
-      min-height: 145px;
+      border-radius: var(--radius);
+      padding: 24px;
+      min-height: 150px;
     }
 
     .skill-card h3 {
+      margin-bottom: 9px;
       font-size: 18px;
-      margin-bottom: 8px;
     }
 
     .skill-card p {
@@ -356,56 +296,45 @@
       font-size: 14px;
     }
 
-    /* =========================
-       CAPABILITIES
-    ========================= */
+    /* TAGS */
 
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 40px;
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
     }
 
-    .capability {
-      background: var(--surface);
+    .tag {
+      display: inline-block;
+      padding: 8px 12px;
+      background: var(--surface-light);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
+      border-radius: 999px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .number {
-      color: var(--blue);
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .capability h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .capability p {
-      color: var(--muted);
-    }
-
-    /* =========================
-       WORK
-    ========================= */
+    /* WORK */
 
     .work-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .work-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: var(--radius);
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
     }
 
     .work-visual {
@@ -431,17 +360,7 @@
     }
 
     .work-content {
-      padding: 24px;
-      flex: 1;
-    }
-
-    .work-content h3 {
-      margin-bottom: 10px;
-    }
-
-    .work-content p {
-      color: var(--muted);
-      font-size: 14px;
+      padding: 25px;
     }
 
     .work-label {
@@ -454,83 +373,103 @@
       text-transform: uppercase;
     }
 
-    .notice {
-      margin-top: 22px;
-      padding: 18px;
-      border-left: 3px solid var(--purple);
-      background: rgba(128,100,255,0.08);
-      color: var(--muted);
-      border-radius: 8px;
+    .work-content h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
     }
 
-    /* =========================
-       EXPERIENCE
-    ========================= */
+    .work-content p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project-details {
+      margin-top: 18px;
+      padding-top: 17px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-details strong {
+      font-size: 13px;
+    }
+
+    .project-details p {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+
+    .portfolio-note {
+      margin-top: 25px;
+      padding: 18px 20px;
+      background: var(--surface-light);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+    }
+
+    .process-number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* EXPERIENCE */
 
     .experience-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
     }
 
     .experience-card h3 {
-      font-size: 28px;
-      margin-bottom: 8px;
+      font-size: 25px;
+      margin-bottom: 6px;
     }
 
-    .experience-role {
+    .experience-title {
       color: var(--blue);
-      font-weight: 700;
-      margin-bottom: 24px;
+      font-weight: 800;
+      margin-bottom: 20px;
     }
 
-    .experience-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .experience-list li {
-      margin-left: 20px;
+    .experience-card ul {
+      padding-left: 22px;
       color: var(--muted);
-      padding-left: 5px;
     }
 
-    /* =========================
-       WORKFLOW
-    ========================= */
-
-    .workflow-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
+    .experience-card li {
+      margin-bottom: 9px;
     }
 
-    .workflow-step {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-      min-height: 150px;
-    }
-
-    .workflow-step .number {
-      font-size: 13px;
-    }
-
-    .workflow-step h3 {
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .workflow-step p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* =========================
-       TOOLS
-    ========================= */
+    /* TOOLS */
 
     .tools-grid {
       display: grid;
@@ -538,111 +477,82 @@
       gap: 20px;
     }
 
-    .tool-box {
+    .tool-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
+      border-radius: var(--radius);
+      padding: 27px;
     }
 
-    .tool-box h3 {
-      margin-bottom: 10px;
+    .tool-card h3 {
+      margin-bottom: 15px;
     }
 
-    .tool-box p {
-      color: var(--muted);
-      margin-bottom: 18px;
-      font-size: 14px;
+    /* STRENGTHS */
+
+    .strengths-box {
+      background: var(--text);
+      color: #fff;
+      border-radius: 24px;
+      padding: 40px;
     }
 
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
+    .strengths-box h2 {
+      font-size: 32px;
+      margin-bottom: 22px;
     }
 
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      min-height: 36px;
-      padding: 7px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--surface-light);
-      color: var(--text);
-      font-size: 13px;
-      white-space: nowrap;
+    .strengths-box .tag {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #fff;
     }
 
-    /* =========================
-       STRENGTHS
-    ========================= */
-
-    .strength-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .strength {
-      padding: 13px 17px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      font-weight: 700;
-    }
-
-    /* =========================
-       TARGET
-    ========================= */
+    /* TARGET */
 
     .target-card {
-      background:
-        linear-gradient(135deg, rgba(128,100,255,0.16), rgba(35,200,255,0.07)),
-        var(--surface);
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 34px;
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: var(--shadow);
     }
 
     .target-card h3 {
-      font-size: 30px;
-      margin-bottom: 14px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     .target-card p {
       color: var(--muted);
-      max-width: 850px;
       margin-bottom: 22px;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    /* CONTACT */
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 24px;
     }
 
     .contact-item {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 22px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    .contact-item span {
+    .contact-item:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-item strong {
       display: block;
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .contact-item strong,
+    .contact-item span,
     .contact-item a {
-      color: var(--text);
+      color: var(--muted);
       word-break: break-word;
     }
 
@@ -650,110 +560,70 @@
       color: var(--blue);
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
+      margin-top: 30px;
+      padding: 35px 0;
       border-top: 1px solid var(--border);
-      padding: 30px 0;
       color: var(--muted);
+      font-size: 13px;
       text-align: center;
-      font-size: 14px;
     }
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* RESPONSIVE */
 
-    @media (max-width: 1050px) {
-      .hero-grid {
+    @media (max-width: 900px) {
+      .hero {
         grid-template-columns: 1fr;
+        gap: 35px;
       }
 
-      .skills-grid {
+      .skills-grid,
+      .work-grid,
+      .process-grid,
+      .tools-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
-      .workflow-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
-    @media (max-width: 720px) {
-      .container {
-        width: min(100% - 26px, var(--max-width));
-      }
-
+    @media (max-width: 650px) {
       .nav {
-        min-height: auto;
-        padding: 16px 0;
+        padding: 12px 0;
         align-items: flex-start;
         flex-direction: column;
       }
 
       .nav-links {
-        width: 100%;
         justify-content: flex-start;
       }
 
-      .nav-links button {
-        padding: 8px 10px;
-        font-size: 13px;
-      }
-
-      .home {
-        padding: 55px 0;
+      .hero {
+        padding: 60px 0;
       }
 
       .hero h1 {
-        font-size: 54px;
         letter-spacing: -2px;
       }
 
       .about-grid,
-      .capability-grid,
+      .skills-grid,
       .work-grid,
+      .process-grid,
+      .tools-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .workflow-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .section {
-        padding: 60px 0;
+        padding: 65px 0;
       }
 
-      .work-visual {
-        aspect-ratio: 16 / 11;
-      }
-    }
-
-    @media (max-width: 430px) {
-      .hero h1 {
-        font-size: 44px;
-      }
-
-      .workflow-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
+      .strengths-box,
+      .target-card,
+      .experience-card,
+      .info-card {
+        padding: 25px;
       }
     }
   </style>
@@ -761,172 +631,207 @@
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+  <!-- NAVIGATION -->
 
   <header>
     <div class="container nav">
 
-      <button class="logo" onclick="showPage('home')">
-        DAGHLUS METEUR
-      </button>
+      <div class="logo">
+        Daghlus Parsaloi Meteur
+      </div>
 
-      <nav class="nav-links" aria-label="Main navigation">
+      <nav class="nav-links">
 
-        <button data-page="about" onclick="showPage('about')">
+        <button class="nav-btn active" data-page="home">
+          Home
+        </button>
+
+        <button class="nav-btn" data-page="about">
           About
         </button>
 
-        <button data-page="skills" onclick="showPage('skills')">
+        <button class="nav-btn" data-page="skills">
           Skills
         </button>
 
-        <button data-page="work" onclick="showPage('work')">
+        <button class="nav-btn" data-page="work">
           Work
         </button>
 
-        <button data-page="experience" onclick="showPage('experience')">
+        <button class="nav-btn" data-page="experience">
           Experience
         </button>
 
-        <button data-page="tools" onclick="showPage('tools')">
+        <button class="nav-btn" data-page="tools">
           Tools
         </button>
 
-        <button data-page="contact" onclick="showPage('contact')">
+        <button class="nav-btn" data-page="contact">
           Contact
         </button>
 
       </nav>
+
     </div>
   </header>
 
 
-  <!-- =========================
-       HOME
-  ========================== -->
+  <!-- HOME -->
 
-  <main id="home" class="page active">
+  <main id="home" class="active">
 
-    <section class="home">
+    <section class="container hero">
+
+      <div>
+
+        <div class="eyebrow">
+          Digital Visual Creative Portfolio
+        </div>
+
+        <h1>
+          Daghlus<br>
+          Parsaloi<br>
+          Meteur
+        </h1>
+
+        <h2>
+          Digital Image Editing · Illustration · Visual Design
+        </h2>
+
+        <p>
+          Visual-focused professional with a strong interest in digital
+          image editing, illustration, visual composition and design-oriented
+          work. I bring careful observation, attention to detail, consistency
+          and structured quality-focused workflows to digital visual projects.
+        </p>
+
+        <div class="hero-actions">
+
+          <button
+            class="btn btn-primary"
+            onclick="showPage('work')">
+            View Portfolio
+          </button>
+
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('contact')">
+            Contact Me
+          </button>
+
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+            target="_blank"
+            rel="noopener">
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <h3>
+          Visual Creative Focus
+        </h3>
+
+        <div class="hero-card-item">
+          Digital Image Editing
+        </div>
+
+        <div class="hero-card-item">
+          Adobe Photoshop
+        </div>
+
+        <div class="hero-card-item">
+          Adobe Illustrator
+        </div>
+
+        <div class="hero-card-item">
+          Illustration & Visual Design
+        </div>
+
+        <div class="hero-card-item">
+          Visual Quality Assurance
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section">
+
       <div class="container">
 
-        <div class="hero-grid">
+        <div class="target-card">
 
-          <div class="hero">
+          <h3>
+            Creative & Visual Production
+          </h3>
 
-            <div class="eyebrow">
-              Digital Visual Creative Portfolio
-            </div>
+          <p>
+            Focused on digital creative work that combines visual accuracy,
+            careful composition, attention to detail and consistent execution.
+            My portfolio includes personal practice work in image editing,
+            digital illustration and visual design.
+          </p>
 
-            <h1>
-              <span>Daghlus</span>
-              <span class="last-name">Parsaloi Meteur</span>
-            </h1>
+          <div class="tag-list">
 
-            <div class="hero-title">
-              Digital Image Editing · Illustration · Visual Design
-            </div>
-
-            <p class="hero-description">
-              Visual-focused professional with experience working carefully
-              with digital images, visual information, quality control, and
-              structured digital workflows. Strong attention to detail,
-              consistency, visual accuracy, and creative problem solving.
-            </p>
-
-            <div class="hero-actions">
-
-              <button
-                class="btn btn-primary"
-                onclick="showPage('work')">
-                View Portfolio
-              </button>
-
-              <button
-                class="btn btn-secondary"
-                onclick="showPage('contact')">
-                Contact Me
-              </button>
-
-              <a
-                class="btn btn-secondary"
-                href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
-                target="_blank"
-                rel="noopener">
-                LinkedIn
-              </a>
-
-            </div>
-
-          </div>
-
-
-          <div class="hero-card">
-
-            <h3>Visual Creative Focus</h3>
-
-            <p style="color:var(--muted); margin-bottom:20px;">
-              Focused on digital visual work where precision,
-              composition, consistency, and quality matter.
-            </p>
-
-            <div class="focus-list">
-
-              <div class="focus-item">
-                <strong>Digital Image Editing</strong>
-              </div>
-
-              <div class="focus-item">
-                <strong>Adobe Photoshop</strong>
-              </div>
-
-              <div class="focus-item">
-                <strong>Adobe Illustrator</strong>
-              </div>
-
-              <div class="focus-item">
-                <strong>Illustration & Visual Design</strong>
-              </div>
-
-              <div class="focus-item">
-                <strong>Visual Quality Assurance</strong>
-              </div>
-
-            </div>
+            <span class="tag">Digital Image Editing</span>
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Adobe Illustrator</span>
+            <span class="tag">Illustration</span>
+            <span class="tag">Visual Design</span>
+            <span class="tag">Digital Assets</span>
+            <span class="tag">Visual QA</span>
 
           </div>
 
         </div>
 
       </div>
+
     </section>
 
   </main>
 
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
+  <!-- ABOUT -->
 
-  <main id="about" class="page">
+  <main id="about">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">About</div>
+          <div class="eyebrow">
+            About
+          </div>
 
-          <h2>Detail-driven visual work.</h2>
+          <h2>
+            Detail-driven visual work.
+          </h2>
 
-          <p class="section-intro">
-            My background in visual data and quality-focused workflows
-            has developed a strong ability to observe details, follow
-            visual requirements, identify inconsistencies, and maintain
-            quality across digital content.
+          <p>
+            My background in visual data and quality-focused workflows has
+            developed my ability to observe details, follow visual
+            requirements, identify inconsistencies and maintain consistent
+            quality across digital work.
           </p>
 
         </div>
@@ -934,30 +839,61 @@
 
         <div class="about-grid">
 
-          <div class="card">
+          <div class="info-card">
 
-            <h3>Professional Profile</h3>
+            <h3>
+              Professional Profile
+            </h3>
 
             <p>
-              I am a visual-data and digital creative professional
-              interested in image editing, illustration, visual
-              composition, digital content, and design-oriented work.
-              I approach visual tasks systematically while paying
-              close attention to detail and consistency.
+              Visual-data and digital creative professional interested in
+              image editing, illustration, visual composition, digital
+              content and design-oriented work.
             </p>
 
           </div>
 
 
-          <div class="card">
+          <div class="info-card">
 
-            <h3>What I Bring</h3>
+            <h3>
+              What I Bring
+            </h3>
 
             <p>
-              Strong observation, structured review, visual quality
-              control, attention to detail, consistency, organization,
-              problem solving, and the ability to work independently
-              within defined project requirements.
+              Strong observation, structured review, visual quality control,
+              attention to detail, consistency, organization, problem
+              solving and the ability to work independently.
+            </p>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <h3>
+              Creative Approach
+            </h3>
+
+            <p>
+              I focus on understanding the visual objective first, then
+              working carefully through composition, detail, consistency
+              and final quality before considering the work complete.
+            </p>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <h3>
+              Quality Mindset
+            </h3>
+
+            <p>
+              My visual review background helps me notice small differences,
+              inconsistencies and quality issues that can affect the final
+              presentation of digital content.
             </p>
 
           </div>
@@ -971,25 +907,35 @@
   </main>
 
 
-  <!-- =========================
-       SKILLS
-  ========================== -->
+  <!-- SKILLS -->
 
-  <main id="skills" class="page">
+  <main id="skills">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">Creative Skills</div>
+          <div class="eyebrow">
+            Creative Skills
+          </div>
 
-          <h2>Visual skills built around precision.</h2>
+          <h2>
+            Visual skills for digital creative work.
+          </h2>
 
-          <p class="section-intro">
-            Core areas relevant to digital image editing, illustration,
-            visual design, creative content, and visual quality assurance.
+          <p>
+            A combination of creative awareness, visual analysis and
+            quality-focused digital workflows.
           </p>
 
         </div>
@@ -999,123 +945,90 @@
 
           <div class="skill-card">
             <h3>Digital Image Editing</h3>
-            <p>Careful image review, refinement and presentation.</p>
+            <p>
+              Careful editing and refinement of digital visual content.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Digital Illustration</h3>
-            <p>Visual asset development with attention to clarity and proportion.</p>
+            <p>
+              Personal practice focused on creating and refining digital
+              visual artwork.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Visual Design</h3>
-            <p>Structured visual presentation and clear communication.</p>
+            <p>
+              Composition, balance, structure and presentation of visual
+              information.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Image Composition</h3>
-            <p>Balance, spacing, positioning and visual hierarchy.</p>
+            <p>
+              Attention to arrangement, spacing and overall visual balance.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Photo Enhancement</h3>
-            <p>Focus on clean, consistent and visually appropriate output.</p>
+            <p>
+              Visual refinement and improvement of digital imagery.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Color Awareness</h3>
-            <p>Attention to visual balance and consistent presentation.</p>
+            <p>
+              Attention to color relationships and consistent visual
+              presentation.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Typography & Layout</h3>
-            <p>Awareness of readability, hierarchy, spacing and alignment.</p>
+            <p>
+              Awareness of readable, structured and balanced visual layouts.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Visual Storytelling</h3>
-            <p>Using visual elements to communicate ideas clearly.</p>
+            <p>
+              Using visual elements to communicate ideas clearly.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Creative Quality Control</h3>
-            <p>Detailed review before visual work is finalized.</p>
+            <p>
+              Reviewing visual work carefully before final presentation.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Visual Consistency</h3>
-            <p>Maintaining consistent standards across related assets.</p>
+            <p>
+              Maintaining consistent visual decisions across digital work.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Digital Assets</h3>
-            <p>Organized approach to digital visual content.</p>
+            <p>
+              Organized handling and presentation of digital visual assets.
+            </p>
           </div>
 
           <div class="skill-card">
             <h3>Visual Problem Solving</h3>
-            <p>Identifying issues and improving visual output systematically.</p>
-          </div>
-
-        </div>
-
-
-        <div style="margin-top:70px;">
-
-          <div class="section-header">
-
-            <div class="section-label">Creative Capabilities</div>
-
-            <h2>A structured approach to creative work.</h2>
-
-          </div>
-
-
-          <div class="capability-grid">
-
-            <div class="capability">
-
-              <div class="number">01</div>
-
-              <h3>Image Editing</h3>
-
-              <p>
-                Careful review and refinement of digital images with
-                attention to presentation, consistency, composition
-                and visual quality.
-              </p>
-
-            </div>
-
-
-            <div class="capability">
-
-              <div class="number">02</div>
-
-              <h3>Illustration</h3>
-
-              <p>
-                Interest in developing and refining digital visual
-                assets with attention to shape, proportion, clarity
-                and overall composition.
-              </p>
-
-            </div>
-
-
-            <div class="capability">
-
-              <div class="number">03</div>
-
-              <h3>Visual Design</h3>
-
-              <p>
-                Organized visual thinking focused on hierarchy,
-                spacing, balance, readability and effective presentation.
-              </p>
-
-            </div>
-
+            <p>
+              Identifying visual issues and working toward practical
+              improvements.
+            </p>
           </div>
 
         </div>
@@ -1127,25 +1040,35 @@
   </main>
 
 
-  <!-- =========================
-       WORK
-  ========================== -->
+  <!-- WORK -->
 
-  <main id="work" class="page">
+  <main id="work">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">Selected Work</div>
+          <div class="eyebrow">
+            Selected Work
+          </div>
 
-          <h2>Creative portfolio work.</h2>
+          <h2>
+            Creative practice and visual projects.
+          </h2>
 
-          <p class="section-intro">
-            Selected examples of original digital creative practice
-            in image editing, illustration and visual design.
+          <p>
+            Selected examples of original digital creative practice in
+            image editing, illustration and visual design.
           </p>
 
         </div>
@@ -1153,9 +1076,10 @@
 
         <div class="work-grid">
 
-          <!-- IMAGE 1: IMAGE EDITING -->
 
-          <div class="work-card">
+          <!-- PROJECT 1 -->
+
+          <article class="work-card">
 
             <div class="work-visual">
 
@@ -1172,21 +1096,35 @@
                 Personal Practice
               </span>
 
-              <h3>Image Editing</h3>
+              <h3>
+                Image Editing
+              </h3>
 
               <p>
-                Personal image-editing practice demonstrating attention
-                to visual presentation, image quality and detail.
+                A personal visual editing exercise focused on image
+                refinement, detail and presentation.
               </p>
+
+              <div class="project-details">
+
+                <strong>
+                  Focus
+                </strong>
+
+                <p>
+                  Image refinement · visual detail · presentation
+                </p>
+
+              </div>
 
             </div>
 
-          </div>
+          </article>
 
 
-          <!-- IMAGE 2: DIGITAL ILLUSTRATION -->
+          <!-- PROJECT 2 -->
 
-          <div class="work-card">
+          <article class="work-card">
 
             <div class="work-visual">
 
@@ -1203,21 +1141,35 @@
                 Personal Practice
               </span>
 
-              <h3>Digital Illustration</h3>
+              <h3>
+                Digital Illustration
+              </h3>
 
               <p>
-                Personal illustration practice demonstrating visual
-                composition, shape, proportion and creative presentation.
+                A personal illustration exercise focused on visual
+                composition, shape, detail and creative expression.
               </p>
+
+              <div class="project-details">
+
+                <strong>
+                  Focus
+                </strong>
+
+                <p>
+                  Illustration · composition · detail · visual expression
+                </p>
+
+              </div>
 
             </div>
 
-          </div>
+          </article>
 
 
-          <!-- IMAGE 3: VISUAL DESIGN -->
+          <!-- PROJECT 3 -->
 
-          <div class="work-card">
+          <article class="work-card">
 
             <div class="work-visual">
 
@@ -1234,24 +1186,41 @@
                 Personal Practice
               </span>
 
-              <h3>Visual Design</h3>
+              <h3>
+                Visual Design
+              </h3>
 
               <p>
-                Personal visual design practice demonstrating layout,
-                hierarchy, spacing and overall visual presentation.
+                A personal design exercise focused on layout, visual
+                hierarchy, consistency and clear presentation.
               </p>
+
+              <div class="project-details">
+
+                <strong>
+                  Focus
+                </strong>
+
+                <p>
+                  Layout · hierarchy · consistency · presentation
+                </p>
+
+              </div>
 
             </div>
 
-          </div>
+          </article>
+
 
         </div>
 
 
-        <div class="notice">
+        <div class="portfolio-note">
+
           These examples are personal practice work created for portfolio
-          presentation. Client work, certifications and professional
-          claims should only be included when accurate.
+          presentation. Client work, certifications and professional claims
+          should only be included when accurate.
+
         </div>
 
       </div>
@@ -1261,133 +1230,238 @@
   </main>
 
 
-  <!-- =========================
-       EXPERIENCE
-  ========================== -->
+  <!-- CREATIVE PROCESS -->
 
-  <main id="experience" class="page">
+  <main id="process">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">Experience</div>
+          <div class="eyebrow">
+            Creative Process
+          </div>
 
-          <h2>Visual data & quality assurance background.</h2>
+          <h2>
+            A structured approach to visual work.
+          </h2>
+
+          <p>
+            I use a simple process to keep creative work organized,
+            consistent and focused on the intended visual result.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-card">
+
+            <div class="process-number">
+              01
+            </div>
+
+            <h3>
+              Understand
+            </h3>
+
+            <p>
+              Understand the purpose, visual requirements and expected
+              result before starting.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              02
+            </div>
+
+            <h3>
+              Plan
+            </h3>
+
+            <p>
+              Consider composition, structure, visual elements and the
+              best way to approach the task.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              03
+            </div>
+
+            <h3>
+              Create
+            </h3>
+
+            <p>
+              Develop the visual work carefully while maintaining attention
+              to detail and consistency.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              04
+            </div>
+
+            <h3>
+              Review
+            </h3>
+
+            <p>
+              Check the work for visual inconsistencies, quality issues
+              and missed requirements.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              05
+            </div>
+
+            <h3>
+              Refine
+            </h3>
+
+            <p>
+              Make appropriate improvements to details, presentation and
+              overall visual consistency.
+            </p>
+
+          </div>
+
+
+          <div class="process-card">
+
+            <div class="process-number">
+              06
+            </div>
+
+            <h3>
+              Finalize
+            </h3>
+
+            <p>
+              Perform a final quality check before preparing the work for
+              presentation or delivery.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- EXPERIENCE -->
+
+  <main id="experience">
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
+        <div class="section-header">
+
+          <div class="eyebrow">
+            Experience
+          </div>
+
+          <h2>
+            Visual analysis and quality-focused experience.
+          </h2>
+
+          <p>
+            My professional background has strengthened the observation,
+            consistency and quality-control skills that support digital
+            creative work.
+          </p>
 
         </div>
 
 
         <div class="experience-card">
 
-          <h3>Visual Data & Quality Assurance Professional</h3>
+          <h3>
+            Visual Data & Quality Assurance Professional
+          </h3>
 
-          <div class="experience-role">
+          <div class="experience-title">
             Digital Visual Content · Image & Video Review · Quality Control
           </div>
 
-          <ul class="experience-list">
+          <ul>
 
             <li>
               Reviewed large volumes of digital image and video content
-              with strong attention to visual detail.
+              against defined requirements.
             </li>
 
             <li>
-              Evaluated visual information against defined project
-              requirements and specifications.
+              Evaluated visual information carefully and identified
+              inconsistencies and quality issues.
             </li>
 
             <li>
-              Identified inconsistencies, quality issues, missing
-              information and visual errors.
+              Maintained consistency while working with structured visual
+              review workflows.
             </li>
 
             <li>
-              Maintained consistency across visual content by applying
-              project instructions carefully.
+              Performed quality checks with strong attention to detail.
             </li>
 
             <li>
-              Performed detailed quality checks before visual data
-              was finalized.
+              Worked independently in remote digital environments while
+              following project requirements.
             </li>
 
             <li>
-              Worked with structured digital workflows where accuracy,
-              consistency and attention to detail were essential.
-            </li>
-
-            <li>
-              Worked independently in remote environments while
-              maintaining productivity and quality standards.
+              Applied structured review and problem-solving methods to
+              visual content.
             </li>
 
           </ul>
 
         </div>
 
-
-        <div style="margin-top:60px;">
-
-          <div class="section-header">
-
-            <div class="section-label">Workflow</div>
-
-            <h2>From brief to final output.</h2>
-
-            <p class="section-intro">
-              A disciplined workflow helps maintain quality,
-              consistency and alignment with the intended creative direction.
-            </p>
-
-          </div>
-
-
-          <div class="workflow-grid">
-
-            <div class="workflow-step">
-              <div class="number">01</div>
-              <h3>Understand</h3>
-              <p>Review requirements, references and expected output.</p>
-            </div>
-
-            <div class="workflow-step">
-              <div class="number">02</div>
-              <h3>Plan</h3>
-              <p>Consider composition, hierarchy and presentation.</p>
-            </div>
-
-            <div class="workflow-step">
-              <div class="number">03</div>
-              <h3>Create</h3>
-              <p>Develop or refine the visual asset.</p>
-            </div>
-
-            <div class="workflow-step">
-              <div class="number">04</div>
-              <h3>Review</h3>
-              <p>Check visual quality and consistency.</p>
-            </div>
-
-            <div class="workflow-step">
-              <div class="number">05</div>
-              <h3>Refine</h3>
-              <p>Improve the work while respecting requirements.</p>
-            </div>
-
-            <div class="workflow-step">
-              <div class="number">06</div>
-              <h3>Finalize</h3>
-              <p>Complete final quality review and delivery preparation.</p>
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
 
     </section>
@@ -1395,85 +1469,131 @@
   </main>
 
 
-  <!-- =========================
-       TOOLS
-  ========================== -->
+  <!-- TOOLS -->
 
-  <main id="tools" class="page">
+  <main id="tools">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">Tools & Background</div>
+          <div class="eyebrow">
+            Tools
+          </div>
 
-          <h2>Creative and technical foundation.</h2>
+          <h2>
+            Digital tools and workflow experience.
+          </h2>
+
+          <p>
+            Tools relevant to creative, visual review and structured
+            digital workflows.
+          </p>
 
         </div>
 
 
         <div class="tools-grid">
 
-          <div class="tool-box">
+          <div class="tool-card">
 
-            <h3>Creative Software</h3>
-
-            <p>
-              Creative software relevant to digital image editing
-              and illustration opportunities.
-            </p>
+            <h3>
+              Creative Software
+            </h3>
 
             <div class="tag-list">
 
-              <span class="tag">Adobe Photoshop</span>
-              <span class="tag">Adobe Illustrator</span>
+              <span class="tag">
+                Adobe Photoshop
+              </span>
+
+              <span class="tag">
+                Adobe Illustrator
+              </span>
 
             </div>
 
           </div>
 
 
-          <div class="tool-box">
+          <div class="tool-card">
 
-            <h3>Visual Data Tools</h3>
-
-            <p>
-              Experience with structured visual-data and annotation environments.
-            </p>
+            <h3>
+              Visual Data Tools
+            </h3>
 
             <div class="tag-list">
 
-              <span class="tag">CVAT</span>
-              <span class="tag">Scale AI</span>
-              <span class="tag">Labelbox</span>
-              <span class="tag">Micro1</span>
+              <span class="tag">
+                CVAT
+              </span>
+
+              <span class="tag">
+                Scale AI
+              </span>
+
+              <span class="tag">
+                Labelbox
+              </span>
+
+              <span class="tag">
+                Micro1
+              </span>
 
             </div>
 
           </div>
 
 
-          <div class="tool-box">
+          <div class="tool-card">
 
-            <h3>Technical Skills</h3>
-
-            <p>
-              Supporting technical knowledge for digital workflows
-              and structured data environments.
-            </p>
+            <h3>
+              Technical
+            </h3>
 
             <div class="tag-list">
 
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">Bash</span>
-              <span class="tag">SQL Basics</span>
-              <span class="tag">JSON</span>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
+              <span class="tag">
+                Python
+              </span>
+
+              <span class="tag">
+                Pandas
+              </span>
+
+              <span class="tag">
+                NumPy
+              </span>
+
+              <span class="tag">
+                Bash
+              </span>
+
+              <span class="tag">
+                SQL Basics
+              </span>
+
+              <span class="tag">
+                JSON
+              </span>
+
+              <span class="tag">
+                Git
+              </span>
+
+              <span class="tag">
+                GitHub
+              </span>
 
             </div>
 
@@ -1482,62 +1602,27 @@
         </div>
 
 
-        <div style="margin-top:60px;">
-
-          <div class="section-header">
-
-            <div class="section-label">Professional Strengths</div>
-
-            <h2>How I work.</h2>
-
-          </div>
+        <div style="height: 30px;"></div>
 
 
-          <div class="strength-grid">
+        <div class="strengths-box">
 
-            <span class="strength">Attention to Detail</span>
-            <span class="strength">Visual Accuracy</span>
-            <span class="strength">Creativity</span>
-            <span class="strength">Consistency</span>
-            <span class="strength">Quality Control</span>
-            <span class="strength">Visual Analysis</span>
-            <span class="strength">Problem Solving</span>
-            <span class="strength">Organization</span>
-            <span class="strength">Independent Work</span>
-            <span class="strength">Remote Collaboration</span>
+          <h2>
+            Professional Strengths
+          </h2>
 
-          </div>
+          <div class="tag-list">
 
-        </div>
-
-
-        <div style="margin-top:60px;">
-
-          <div class="target-card">
-
-            <div class="section-label">Target Opportunity</div>
-
-            <h3>Digital Creative & Visual Production</h3>
-
-            <p>
-              Interested in opportunities involving digital image
-              editing, illustration, visual design and creative digital
-              content, particularly projects requiring careful visual
-              execution, consistency and quality control.
-            </p>
-
-            <div class="tag-list">
-
-              <span class="tag">Digital Image Editing</span>
-              <span class="tag">Adobe Photoshop</span>
-              <span class="tag">Adobe Illustrator</span>
-              <span class="tag">Illustration</span>
-              <span class="tag">Visual Design</span>
-              <span class="tag">Creative Content</span>
-              <span class="tag">Digital Assets</span>
-              <span class="tag">Visual QA</span>
-
-            </div>
+            <span class="tag">Attention to Detail</span>
+            <span class="tag">Visual Accuracy</span>
+            <span class="tag">Creativity</span>
+            <span class="tag">Consistency</span>
+            <span class="tag">Quality Control</span>
+            <span class="tag">Visual Analysis</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Organization</span>
+            <span class="tag">Independent Work</span>
+            <span class="tag">Remote Collaboration</span>
 
           </div>
 
@@ -1550,25 +1635,36 @@
   </main>
 
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
+  <!-- CONTACT -->
 
-  <main id="contact" class="page">
+  <main id="contact">
 
     <section class="section">
 
       <div class="container">
 
+        <div class="back-home">
+          <button
+            class="btn btn-secondary"
+            onclick="showPage('home')">
+            ← Back Home
+          </button>
+        </div>
+
         <div class="section-header">
 
-          <div class="section-label">Contact</div>
+          <div class="eyebrow">
+            Contact
+          </div>
 
-          <h2>Let's connect.</h2>
+          <h2>
+            Let's connect.
+          </h2>
 
-          <p class="section-intro">
-            For professional opportunities, collaborations and digital
-            creative projects, please use the contact details below.
+          <p>
+            For digital creative, visual production, image editing,
+            illustration or related opportunities, you can reach me through
+            the contact details below.
           </p>
 
         </div>
@@ -1576,46 +1672,128 @@
 
         <div class="contact-grid">
 
-          <div class="contact-item">
-            <span>Name</span>
-            <strong>Daghlus Parsaloi Meteur</strong>
+
+          <div class="info-card">
+
+            <div class="contact-item">
+
+              <strong>
+                Name
+              </strong>
+
+              <span>
+                Daghlus Parsaloi Meteur
+              </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                Location
+              </strong>
+
+              <span>
+                Nairobi, Kenya
+              </span>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                Email
+              </strong>
+
+              <a href="mailto:daghlusmeteur@gmail.com">
+                daghlusmeteur@gmail.com
+              </a>
+
+            </div>
+
           </div>
 
-          <div class="contact-item">
-            <span>Location</span>
-            <strong>Nairobi, Kenya</strong>
+
+          <div class="info-card">
+
+            <div class="contact-item">
+
+              <strong>
+                LinkedIn
+              </strong>
+
+              <a
+                href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
+                target="_blank"
+                rel="noopener">
+                linkedin.com/in/daghlus-meteur-7849b4385
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                GitHub
+              </strong>
+
+              <a
+                href="https://github.com/meteur2025"
+                target="_blank"
+                rel="noopener">
+                github.com/meteur2025
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <strong>
+                Portfolio Focus
+              </strong>
+
+              <span>
+                Digital Creative & Visual Production
+              </span>
+
+            </div>
+
           </div>
 
-          <div class="contact-item">
-            <span>Email</span>
-            <a href="mailto:daghlusmeteur@gmail.com">
-              daghlusmeteur@gmail.com
-            </a>
-          </div>
 
-          <div class="contact-item">
-            <span>LinkedIn</span>
-            <a
-              href="https://www.linkedin.com/in/daghlus-meteur-7849b4385"
-              target="_blank"
-              rel="noopener">
-              linkedin.com/in/daghlus-meteur-7849b4385
-            </a>
-          </div>
+        </div>
 
-          <div class="contact-item">
-            <span>GitHub</span>
-            <a
-              href="https://github.com/meteur2025"
-              target="_blank"
-              rel="noopener">
-              github.com/meteur2025
-            </a>
-          </div>
 
-          <div class="contact-item">
-            <span>Professional Focus</span>
-            <strong>Digital Visual Creative Work</strong>
+        <div style="height: 25px;"></div>
+
+
+        <div class="target-card">
+
+          <h3>
+            Target Opportunity
+          </h3>
+
+          <p>
+            Digital creative and visual production work involving image
+            editing, illustration, visual design, digital assets and
+            quality-focused visual workflows.
+          </p>
+
+          <div class="tag-list">
+
+            <span class="tag">Digital Image Editing</span>
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Adobe Illustrator</span>
+            <span class="tag">Illustration</span>
+            <span class="tag">Visual Design</span>
+            <span class="tag">Creative Content</span>
+            <span class="tag">Digital Assets</span>
+            <span class="tag">Visual QA</span>
+
           </div>
 
         </div>
@@ -1627,27 +1805,29 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
+
     <div class="container">
-      © 2026 Daghlus Parsaloi Meteur · Digital Visual Creative Portfolio
+
+      © 2026 Daghlus Parsaloi Meteur.
+      Digital Visual Creative Portfolio.
+
     </div>
+
   </footer>
 
 
-  <!-- =========================
-       NAVIGATION JAVASCRIPT
-  ========================== -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
     function showPage(pageId) {
 
-      const pages = document.querySelectorAll(".page");
-      const buttons = document.querySelectorAll(".nav-links button");
+      const pages = document.querySelectorAll("main");
+
+      const buttons = document.querySelectorAll(".nav-btn");
 
       pages.forEach(function(page) {
         page.classList.remove("active");
@@ -1664,25 +1844,38 @@
       }
 
       const selectedButton = document.querySelector(
-        '.nav-links button[data-page="' + pageId + '"]'
+        '.nav-btn[data-page="' + pageId + '"]'
       );
 
       if (selectedButton) {
         selectedButton.classList.add("active");
       }
 
+      window.location.hash = pageId;
+
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
-
-      history.replaceState(null, "", "#" + pageId);
     }
 
 
-    function loadPageFromUrl() {
+    document.querySelectorAll(".nav-btn").forEach(function(button) {
 
-      const pageId = window.location.hash.replace("#", "");
+      button.addEventListener("click", function() {
+
+        const pageId = button.getAttribute("data-page");
+
+        showPage(pageId);
+
+      });
+
+    });
+
+
+    window.addEventListener("load", function() {
+
+      const hash = window.location.hash.replace("#", "");
 
       const validPages = [
         "home",
@@ -1694,17 +1887,40 @@
         "contact"
       ];
 
-      if (validPages.includes(pageId)) {
-        showPage(pageId);
+      if (validPages.includes(hash)) {
+
+        showPage(hash);
+
       } else {
+
         showPage("home");
+
       }
-    }
+
+    });
 
 
-    window.addEventListener("load", loadPageFromUrl);
+    window.addEventListener("hashchange", function() {
 
-    window.addEventListener("hashchange", loadPageFromUrl);
+      const hash = window.location.hash.replace("#", "");
+
+      const validPages = [
+        "home",
+        "about",
+        "skills",
+        "work",
+        "experience",
+        "tools",
+        "contact"
+      ];
+
+      if (validPages.includes(hash)) {
+
+        showPage(hash);
+
+      }
+
+    });
 
   </script>
 
