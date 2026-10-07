@@ -64,7 +64,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
@@ -74,19 +74,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .logo {
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      align-items: center;
+      gap: 8px;
       justify-content: flex-end;
     }
 
@@ -94,11 +96,13 @@
       border: 0;
       background: transparent;
       color: var(--muted);
-      padding: 9px 11px;
+      padding: 10px 12px;
       border-radius: 9px;
       cursor: pointer;
       font-size: 14px;
       font-weight: 700;
+      white-space: nowrap;
+      transition: 0.2s ease;
     }
 
     .nav-links button:hover,
@@ -301,12 +305,15 @@
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
+      align-items: center;
+      gap: 10px;
     }
 
     .tag {
-      display: inline-block;
-      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      padding: 8px 13px;
       background: var(--surface-light);
       border: 1px solid var(--border);
       border-radius: 999px;
@@ -485,7 +492,7 @@
     }
 
     .tool-card h3 {
-      margin-bottom: 15px;
+      margin-bottom: 17px;
     }
 
     /* STRENGTHS */
@@ -574,6 +581,18 @@
     /* RESPONSIVE */
 
     @media (max-width: 900px) {
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
       .hero {
         grid-template-columns: 1fr;
         gap: 35px;
@@ -588,14 +607,14 @@
     }
 
     @media (max-width: 650px) {
-      .nav {
-        padding: 12px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
 
       .nav-links {
-        justify-content: flex-start;
+        gap: 6px;
+      }
+
+      .nav-links button {
+        padding: 8px 9px;
+        font-size: 13px;
       }
 
       .hero {
@@ -625,6 +644,10 @@
       .info-card {
         padding: 25px;
       }
+
+      .tag {
+        white-space: normal;
+      }
     }
   </style>
 </head>
@@ -634,6 +657,7 @@
   <!-- NAVIGATION -->
 
   <header>
+
     <div class="container nav">
 
       <div class="logo">
@@ -673,6 +697,7 @@
       </nav>
 
     </div>
+
   </header>
 
 
@@ -810,11 +835,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -916,11 +943,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -1049,11 +1078,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -1077,7 +1108,7 @@
         <div class="work-grid">
 
 
-          <!-- PROJECT 1 -->
+          <!-- IMAGE EDITING -->
 
           <article class="work-card">
 
@@ -1122,7 +1153,7 @@
           </article>
 
 
-          <!-- PROJECT 2 -->
+          <!-- DIGITAL ILLUSTRATION -->
 
           <article class="work-card">
 
@@ -1167,7 +1198,7 @@
           </article>
 
 
-          <!-- PROJECT 3 -->
+          <!-- VISUAL DESIGN -->
 
           <article class="work-card">
 
@@ -1230,158 +1261,6 @@
   </main>
 
 
-  <!-- CREATIVE PROCESS -->
-
-  <main id="process">
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="back-home">
-          <button
-            class="btn btn-secondary"
-            onclick="showPage('home')">
-            ← Back Home
-          </button>
-        </div>
-
-        <div class="section-header">
-
-          <div class="eyebrow">
-            Creative Process
-          </div>
-
-          <h2>
-            A structured approach to visual work.
-          </h2>
-
-          <p>
-            I use a simple process to keep creative work organized,
-            consistent and focused on the intended visual result.
-          </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-card">
-
-            <div class="process-number">
-              01
-            </div>
-
-            <h3>
-              Understand
-            </h3>
-
-            <p>
-              Understand the purpose, visual requirements and expected
-              result before starting.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              02
-            </div>
-
-            <h3>
-              Plan
-            </h3>
-
-            <p>
-              Consider composition, structure, visual elements and the
-              best way to approach the task.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              03
-            </div>
-
-            <h3>
-              Create
-            </h3>
-
-            <p>
-              Develop the visual work carefully while maintaining attention
-              to detail and consistency.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              04
-            </div>
-
-            <h3>
-              Review
-            </h3>
-
-            <p>
-              Check the work for visual inconsistencies, quality issues
-              and missed requirements.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              05
-            </div>
-
-            <h3>
-              Refine
-            </h3>
-
-            <p>
-              Make appropriate improvements to details, presentation and
-              overall visual consistency.
-            </p>
-
-          </div>
-
-
-          <div class="process-card">
-
-            <div class="process-number">
-              06
-            </div>
-
-            <h3>
-              Finalize
-            </h3>
-
-            <p>
-              Perform a final quality check before preparing the work for
-              presentation or delivery.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
   <!-- EXPERIENCE -->
 
   <main id="experience">
@@ -1391,11 +1270,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -1478,11 +1359,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -1504,6 +1387,7 @@
 
 
         <div class="tools-grid">
+
 
           <div class="tool-card">
 
@@ -1599,10 +1483,11 @@
 
           </div>
 
+
         </div>
 
 
-        <div style="height: 30px;"></div>
+        <div style="height: 35px;"></div>
 
 
         <div class="strengths-box">
@@ -1613,16 +1498,45 @@
 
           <div class="tag-list">
 
-            <span class="tag">Attention to Detail</span>
-            <span class="tag">Visual Accuracy</span>
-            <span class="tag">Creativity</span>
-            <span class="tag">Consistency</span>
-            <span class="tag">Quality Control</span>
-            <span class="tag">Visual Analysis</span>
-            <span class="tag">Problem Solving</span>
-            <span class="tag">Organization</span>
-            <span class="tag">Independent Work</span>
-            <span class="tag">Remote Collaboration</span>
+            <span class="tag">
+              Attention to Detail
+            </span>
+
+            <span class="tag">
+              Visual Accuracy
+            </span>
+
+            <span class="tag">
+              Creativity
+            </span>
+
+            <span class="tag">
+              Consistency
+            </span>
+
+            <span class="tag">
+              Quality Control
+            </span>
+
+            <span class="tag">
+              Visual Analysis
+            </span>
+
+            <span class="tag">
+              Problem Solving
+            </span>
+
+            <span class="tag">
+              Organization
+            </span>
+
+            <span class="tag">
+              Independent Work
+            </span>
+
+            <span class="tag">
+              Remote Collaboration
+            </span>
 
           </div>
 
@@ -1644,11 +1558,13 @@
       <div class="container">
 
         <div class="back-home">
+
           <button
             class="btn btn-secondary"
             onclick="showPage('home')">
             ← Back Home
           </button>
+
         </div>
 
         <div class="section-header">
@@ -1785,14 +1701,37 @@
 
           <div class="tag-list">
 
-            <span class="tag">Digital Image Editing</span>
-            <span class="tag">Adobe Photoshop</span>
-            <span class="tag">Adobe Illustrator</span>
-            <span class="tag">Illustration</span>
-            <span class="tag">Visual Design</span>
-            <span class="tag">Creative Content</span>
-            <span class="tag">Digital Assets</span>
-            <span class="tag">Visual QA</span>
+            <span class="tag">
+              Digital Image Editing
+            </span>
+
+            <span class="tag">
+              Adobe Photoshop
+            </span>
+
+            <span class="tag">
+              Adobe Illustrator
+            </span>
+
+            <span class="tag">
+              Illustration
+            </span>
+
+            <span class="tag">
+              Visual Design
+            </span>
+
+            <span class="tag">
+              Creative Content
+            </span>
+
+            <span class="tag">
+              Digital Assets
+            </span>
+
+            <span class="tag">
+              Visual QA
+            </span>
 
           </div>
 
@@ -1826,7 +1765,6 @@
     function showPage(pageId) {
 
       const pages = document.querySelectorAll("main");
-
       const buttons = document.querySelectorAll(".nav-btn");
 
       pages.forEach(function(page) {
